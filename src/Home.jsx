@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./styles.css";
-
+import {
+  TrendingUp,
+  Network,
+  Target,
+  Share2,
+  RefreshCw,
+  Wrench,
+  Hexagon,
+} from "lucide-react";
 import {
   FaInstagram,
   FaFacebookF,
@@ -33,7 +41,7 @@ const images = {
 const journeys = [
   {
     image: images.strategy,
-    eyebrow: "01",
+    eyebrow: "",
     title: "Strategy →",
     subtitle: "Transformation",
     path: "/strategy-transformation",
@@ -41,7 +49,7 @@ const journeys = [
 
   {
     image: images.people,
-    eyebrow: "02",
+    eyebrow: "",
     title: "People →",
     subtitle: "Performance",
     path: "/people-performance",
@@ -49,7 +57,7 @@ const journeys = [
 
   {
     image: images.change,
-    eyebrow: "03",
+    eyebrow: "",
     title: "Change →",
     subtitle: "Sustainability",
     path: "/change-sustainability",
@@ -57,21 +65,30 @@ const journeys = [
 
   {
     image: images.future,
-    eyebrow: "04",
+    eyebrow: "",
     title: "Today →",
     subtitle: "Tomorrow",
     path: "/today-tomorrow",
   },
 ];
 
+// const contexts = [
+//   "Growth",
+//   "M&A",
+//   "Expansion",
+//   "Integration",
+//   "Restructuring",
+//   "New Operating Model",
+//   "Digital Transformation",
+// ];
 const contexts = [
-  "Growth",
-  "M&A",
-  "Expansion",
-  "Integration",
-  "Restructuring",
-  "New Operating Model",
-  "Digital Transformation",
+  { label: "Growth", icon: TrendingUp },
+  { label: "M&A", icon: Network },
+  { label: "Expansion", icon: Target },
+  { label: "Integration", icon: Share2 },
+  { label: "Restructuring", icon: RefreshCw },
+  { label: "New Operating Model", icon: Wrench },
+  { label: "Digital Transformation", icon: Hexagon },
 ];
 
 const approach = [
@@ -96,6 +113,9 @@ const approach = [
     "Enable adoption, build capability and embed sustainable outcomes.",
   ],
 ];
+
+
+
 function Brand({ footer = false }) {
   return (
     // <Link
@@ -117,9 +137,9 @@ function Brand({ footer = false }) {
     //   </span>
     // </Link>
     <Link
-  className={`brand ${footer ? "brand--footer" : ""}`}
-  to="/"
-  aria-label="Verge Shifts home"
+  // className={`brand ${footer ? "brand--footer" : ""}`}
+  // to="/"
+  // aria-label="Verge Shifts home"
 >
   <img
     src="/logo1.png"
@@ -364,7 +384,30 @@ function Home() {
 
 
         {/* CONTEXTS */}
-        <section
+        {/* CONTEXTS */}
+<section className="contexts" id="contexts">
+  <div className="container contexts-layout">
+    <div className="contexts-intro">
+      <p className="eyebrow">BUSINESS CONTEXTS</p>
+      <h2>Where we create impact.</h2>
+      <p>
+        Verge Shifts bring deep expertise across key business contexts
+        to help you navigate complexity and support in building your next
+        organization operating model.
+      </p>
+    </div>
+
+    <div className="context-list">
+      {contexts.map(({ label, icon: Icon }) => (
+        <div className="context-item" key={label}>
+          <Icon className="context-icon" size={28} strokeWidth={1.5} />
+          <span>{label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+        {/* <section
           className="contexts"
           id="contexts"
         >
@@ -382,9 +425,9 @@ function Home() {
               </h2>
 
               <p>
-                We bring deep expertise across key business
-                contexts to help you navigate complexity and
-                build what’s next.
+               Verge shifts bring deep expertise across key business contexts 
+               to help you navigate complexity and support in building your nextorganization operating model .
+              
               </p>
 
             </div>
@@ -416,7 +459,7 @@ function Home() {
 
           </div>
 
-        </section>
+        </section> */}
 
 
         {/* APPROACH */}
@@ -490,7 +533,7 @@ function Home() {
 
 
         {/* FOUNDER */}
-        <section
+        {/* <section
           className="founder"
           id="about"
         >
@@ -591,7 +634,7 @@ function Home() {
         </section>
 
 
-        {/* CONTACT */}
+      
         <section
           className="cta-section"
           id="contact"
@@ -640,7 +683,7 @@ function Home() {
 
           </div>
 
-        </section>
+        </section> */}
 
       </main>
 

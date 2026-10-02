@@ -1,6 +1,6 @@
 export const pages = {
   strategy: {
-    number: "01",
+    number: "",
     title: "Strategy → Transformation",
     intro: "From strategic intent to an organization that can execute it.",
     image:
@@ -24,7 +24,7 @@ export const pages = {
     icon: "✦",
   },
   people: {
-    number: "02",
+    number: "",
     title: "People → Performance",
     intro: "From people capability to measurable business performance.",
     image:
@@ -49,7 +49,7 @@ export const pages = {
     icon: "♧",
   },
   change: {
-    number: "03",
+    number: "",
     title: "Change → Sustainability",
     intro: "From managing change to embedding the new way of working.",
     image:
@@ -75,7 +75,7 @@ export const pages = {
     icon: "⌁",
   },
   future: {
-    number: "04",
+    number: "",
     title: "Today → Tomorrow",
     intro: "From the current state to the organization of the future.",
     image:

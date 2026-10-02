@@ -25,7 +25,17 @@ function Footer() {
       <div className="container footer-container">
 
         <div className="footer-top">
+ <div className="contact-details">
 
+              <a
+                href="mailto:connect@vergeshifts.com"
+                className="contact-email"
+              >
+                connect@vergeshifts.com
+              </a>
+
+              
+            </div>
           {/* BRAND */}
           <div className="footer-brand">
             <Brand footer />
@@ -66,72 +76,21 @@ function Footer() {
           </div>
 
           {/* EXPLORE */}
-          <div className="footer-column">
-            <h4>Explore</h4>
-
-            <Link to="/">Home</Link>
-            <Link to="/strategy-transformation">
-              The Shifts
-            </Link>
-            <Link to="/#contexts">
-              Contexts
-            </Link>
-            <Link to="/#about">
-              About Ria
-            </Link>
-            <Link to="/#insights">
-              Insights
-            </Link>
-          </div>
+        
 
           {/* SERVICES */}
-          <div className="footer-column">
-            <h4>Focus Areas</h4>
-
-            <Link to="/strategy-transformation">
-              Strategy &amp; Transformation
-            </Link>
-
-            <Link to="/people-performance">
-              People &amp; Performance
-            </Link>
-
-            <Link to="/change-sustainability">
-              Change &amp; Sustainability
-            </Link>
-
-            <Link to="/today-tomorrow">
-              Today &amp; Tomorrow
-            </Link>
-          </div>
+      
 
           {/* CONTACT */}
-          <div className="footer-column footer-contact">
-            <h4>Let's Connect</h4>
-
-            <p>
-              Ready to shape what's next?
-            </p>
-
-            <Link
-              to="/contact"
-              className="footer-contact-button"
-            >
-              Get in Touch
-              <span>→</span>
-            </Link>
-          </div>
+        
 
         </div>
 
         {/* LARGE BRAND STATEMENT */}
-        <div className="footer-statement">
-          <span>FROM BOARDROOM</span>
-          <span>TO DIGITAL</span>
-        </div>
+       
 
         {/* DIVIDER */}
-        <div className="footer-divider"></div>
+       
 
         {/* BOTTOM */}
         <div className="footer-bottom">

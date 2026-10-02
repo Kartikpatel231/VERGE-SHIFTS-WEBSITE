@@ -6,7 +6,7 @@ import Page from "./Page";
 import Contact from "./Contact";
 import Header from "./Header";
 import Footer from "./Footer";
-
+import BusinessContexts from "./BusinessContexts";
 import { pages } from "./data";
 
 function App() {
@@ -47,6 +47,10 @@ function App() {
             path="/today-tomorrow"
             element={<Page page={pages.future} />}
           />
+          <Route
+  path="/business-contexts"
+  element={<BusinessContexts />}
+/>
 <Route
   path="/contact"
   element={<Contact />}
