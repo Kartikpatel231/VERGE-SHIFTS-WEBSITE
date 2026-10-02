@@ -11,6 +11,46 @@ const Contact = () => {
     message: "",
   });
 
+const [submitStatus, setSubmitStatus] = useState("");
+const [isSubmitting, setIsSubmitting] = useState(false);
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  setIsSubmitting(true);
+  setSubmitStatus("");
+
+  try {
+    const response = await fetch("/.netlify/functions/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData)
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.message || "Failed to send message.");
+    }
+
+    setSubmitStatus("success");
+    setFormData({
+      name: "",
+      email: "",
+      subject: "Select Subject",
+      message: ""
+    });
+
+  } catch (error) {
+    console.error("Contact form error:", error);
+    setSubmitStatus("error");
+
+  } finally {
+    setIsSubmitting(false);
+  }
+};
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -20,27 +60,27 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
 
-    // Frontend demonstration only.
-    // Connect this handler to your backend/API to send messages.
-    alert("Thank you! Your message has been submitted.");
+  //   // Frontend demonstration only.
+  //   // Connect this handler to your backend/API to send messages.
+  //   alert("Thank you! Your message has been submitted.");
 
-    setFormData({
-      name: "",
-      email: "",
-      subject: "Select Subject",
-      message: "",
-    });
-  };
+  //   setFormData({
+  //     name: "",
+  //     email: "",
+  //     subject: "Select Subject",
+  //     message: "",
+  //   });
+  // };
 
   return (
     <>
       {/* <Header /> */}
 
       <main className="contact-page">
-        {/* Hero Section */}
+   
         <section className="contact-hero">
           <div className="contact-hero-content">
             <h1>Contact</h1>
@@ -55,10 +95,10 @@ const Contact = () => {
         {/* Contact Details and Form */}
         <section className="contact-main">
           <div className="contact-details">
-            <a href="mailto:ria@vergshifts.com" className="contact-detail">
+            {/* <a href="mailto:ria@vergshifts.com" className="contact-detail">
               <span className="contact-icon">✉</span>
               <span>ria@vergshifts.com</span>
-            </a>
+            </a> */}
 
             <a
               href="mailto:connect@vergshifts.com"
@@ -73,7 +113,7 @@ const Contact = () => {
               <span>UAE (Global Engagements)</span>
             </div>
 
-            <a
+            {/* <a
               href="https://www.linkedin.com/"
               target="_blank"
               rel="noreferrer"
@@ -81,7 +121,7 @@ const Contact = () => {
             >
               <span className="linkedin-icon">in</span>
               <span>linkedin.com/in/yourprofile</span>
-            </a>
+            </a> */}
           </div>
 
           <div className="contact-form-wrapper">
@@ -152,9 +192,27 @@ const Contact = () => {
                 />
               </div>
 
-              <button type="submit" className="contact-submit">
-                Send Message <span>→</span>
-              </button>
+              
+<button
+  type="submit"
+  className="contact-submit"
+  disabled={isSubmitting}
+>
+  {isSubmitting ? "Sending..." : "Send Message"}
+  {!isSubmitting && <span>→</span>}
+</button>
+
+{submitStatus === "success" && (
+  <p className="form-success">
+    Thank you! Your message has been sent successfully.
+  </p>
+)}
+
+{submitStatus === "error" && (
+  <p className="form-error">
+    Unable to send your message. Please try again.
+  </p>
+)}
             </form>
           </div>
         </section>

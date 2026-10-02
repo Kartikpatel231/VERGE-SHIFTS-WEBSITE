@@ -106,9 +106,11 @@ function Header() {
 
           {/* CONTEXTS */}
           <Link
-            to="/#contexts"
+            // to="/#contexts"
+            to="/business-contexts"
+            onClick={closeMenu}
           //  onClick={closeMenu}
-           onClick={() => handleSectionClick("contexts")}
+          // onClick={() => handleSectionClick("contexts")}
           >
             Contexts
           </Link>
