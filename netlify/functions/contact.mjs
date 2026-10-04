@@ -34,8 +34,8 @@ export default async (req) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "VERGE SHIFTS Website <kartik.p@fjtco.com>",
-        to: ["kartik.p@fjtco.com"],
+        from: "VERGE SHIFTS Website <connect@vergshifts.com>",
+        to: ["kartik.p@fjtco.com", "arun@fjtco.com", "ria@vergshifts.com"],
         reply_to: email.trim(),
         subject: `Website Enquiry: ${subject}`,
         html: `
