@@ -95,14 +95,7 @@ function Header() {
           </Link>
 
           {/* THE SHIFTS */}
-          <Link
-            to="/#shifts"
-           // onClick={closeMenu}
-            onClick={() => handleSectionClick("shifts")}
-          >
-            The Shifts{" "}
-            <span className="chevron">⌄</span>
-          </Link>
+         
 
           {/* CONTEXTS */}
           <Link
@@ -121,25 +114,32 @@ function Header() {
            // onClick={closeMenu}
              onClick={() => handleSectionClick("about")}
           >
-            About Ria
+            Approach
           </Link>
-
+ <Link
+            to="/#shifts"
+           // onClick={closeMenu}
+            onClick={() => handleSectionClick("shifts")}
+          >
+            The Shifts{" "}
+            <span className="chevron">⌄</span>
+          </Link>
           {/* INSIGHTS */}
-          <Link
+          {/* <Link
             to="/#insights"
             // onClick={closeMenu}
              onClick={() => handleSectionClick("insights")}
           >
             Insights
-          </Link>
+          </Link> */}
 
           {/* CONTACT PAGE */}
-          <Link
+          {/* <Link
             to="/contact"
             onClick={closeMenu}
           >
             Contact
-          </Link>
+          </Link> */}
 
           {/* GET IN TOUCH */}
           <Link
