@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./styles.css";
+// import "./styles.css";
+import "./layourt.css"
 import {
   TrendingUp,
+  Handshake,
+  Globe,
+  Layers,
+  GitCompare,
   Network,
-  Target,
-  Share2,
-  RefreshCw,
-  Wrench,
-  Hexagon,
+  Cpu,
+  BarChart3,
 } from "lucide-react";
 import {
   FaInstagram,
@@ -81,14 +83,24 @@ const journeys = [
 //   "New Operating Model",
 //   "Digital Transformation",
 // ];
+// import {
+//   TrendingUp,
+//   Handshake,
+//   Globe,
+//   Layers,
+//   GitCompare,
+//   Network,
+//   Cpu,
+//   BarChart3,
+// } from "lucide-react";
 const contexts = [
-  { label: "Growth", icon: TrendingUp },
-  { label: "M&A", icon: Network },
-  { label: "Expansion", icon: Target },
-  { label: "Integration", icon: Share2 },
-  { label: "Restructuring", icon: RefreshCw },
-  { label: "New Operating Model", icon: Wrench },
-  { label: "Digital Transformation", icon: Hexagon },
+  { label: "Growth", icon: BarChart3 },
+  { label: "M&A", icon: Handshake },
+  { label: "Expansion", icon: Globe },
+  { label: "Integration", icon: GitCompare },
+  { label: "Restructuring", icon: Network },
+  { label: "New Operating Model", icon:  Layers},
+  { label: "Digital Transformation", icon: Cpu },
 ];
 
 const approach = [
@@ -137,9 +149,9 @@ function Brand({ footer = false }) {
     //   </span>
     // </Link>
     <Link
-  // className={`brand ${footer ? "brand--footer" : ""}`}
-  // to="/"
-  // aria-label="Verge Shifts home"
+  className={`brand ${footer ? "brand--footer" : ""}`}
+  to="/"
+  aria-label="Verge Shifts home"
 >
   <img
     src="/logo1.png"
@@ -316,6 +328,17 @@ function Home() {
 
 
         {/* THE SHIFTS */}
+        <section className="section shifts-intro" id="shifts-intro">
+        <div className="container shifts-intro-content">
+          <p className="eyebrow">OUR PERSPECTIVE</p>
+          <h1 className="shifts-headline">
+            At the verge of every major business shift, there is complexity. We help leadership navigate it.
+          </h1>
+          <p className="shifts-description">
+            <strong>Verge Shifts</strong> partners with Boards, CEOs, and leadership teams to navigate critical transformation and transition journeys — turning strategic intent into organizational, operational, technological, and people shifts, and ultimately into execution.
+          </p>
+        </div>
+      </section>
         <section
           className="section shifts"
           id="shifts"
@@ -334,7 +357,7 @@ function Home() {
               </h2>
 
               <p>
-                Integrated. People-centric. Built for what’s next.
+               People-centric. Built for what’s next.
               </p>
 
             </div>
