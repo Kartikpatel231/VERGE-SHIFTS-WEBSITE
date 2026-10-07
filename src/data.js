@@ -2,17 +2,17 @@ export const pages = {
   strategy: {
     number: "",
     title: "Strategy → Transformation",
-    intro: "From strategic intent to an organization that can execute it.",
+    intro: "Turning strategic intent into an executable transformation agenda.",
     image:
-      "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85",
+      "https://images.unsplash.com/photo-1557159557-7a93eaadf72a?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     challenge:
       "Great strategies create direction. But turning intent into real, lasting change requires more than a plan — it requires alignment, structure and execution.",
     approach:
-      "We help you define the transformation agenda, evolve the operating model, mobilize the organization and build the governance to deliver results.",
+      "We help you define the transformation agenda, evolve the operating model, redesign the organization structure and build the governance to deliver results.",
     focus: [
       "Transformation strategy & roadmap",
-      "Business transformation",
-      "Operating model evolution",
+
+      "Operating model reevolution",
       "Organization redesign",
       "Transformation governance",
       "Board / CEO alignment",
@@ -20,83 +20,78 @@ export const pages = {
     secondaryImage:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=85",
     outcome:
-      "A clear transformation agenda and an organization ready to execute it.",
+      "A clear transformation agenda and an organization readiness  to execute it.",
     icon: "✦",
   },
   people: {
     number: "",
     title: "People → Performance",
-    intro: "From people capability to measurable business performance.",
+    intro: "From capablity to measurable business performance.",
     image:
-      "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1800&q=85",
+      "https://images.unsplash.com/photo-1779896412109-1b221c2b350b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     challenge:
-      "Talent, leadership and culture are critical to transformation, but often underutilized, misaligned or not fully activated.",
+      "Talent, leadership and culture are critical to transformation, but often underestimated, misaligned or not fully activated.",
     approach:
-      "We help you build leadership capability, strengthen organizational effectiveness and create performance systems that fuel business outcomes.",
+      "We help you build people capablity , change mindsets , strengthen organization effectiveness, and create performance systems that fuel business outcomes.",
     focus: [
       "Leadership alignment",
       "Organization effectiveness",
-      "Talent & succession",
-      "Critical-role assessment",
+      "Talent & Plannery",
+      "Recruitment and selection",
       "Performance architecture",
-      "Culture & mindset",
-      "Workforce capability",
-      "Leadership transition",
+      "Coaching",
+      "Capability building and transitions",
     ],
     secondaryImage:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1000&q=85",
+      "https://plus.unsplash.com/premium_photo-1661962760305-87a7d0a73f53?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     outcome: "Engaged people, stronger leadership and measurable performance.",
     icon: "♧",
   },
   change: {
     number: "",
-    title: "Change → Sustainability",
-    intro: "From managing change to embedding the new way of working.",
+    title: "TRANSITION → CONTINUITY",
+    intro: "Navigating the complexity of moving from one state to another.",
     image:
       "https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=1800&q=85",
     challenge:
-      "Change is complex — and often fragile. Without the right foundations, new ways of working don't last.",
+      "Change is complex -and often fragile. What worked yesterday, may not work tommorrow. Without right approach , change can create fatigue & resistance.",
     approach:
-      "We help you navigate transition, manage risk, drive adoption and embed the change for long-term sustainability.",
+      "We help you build  change ready organisations, embed new behavious and create sustainable ways of working across people , process and technology.",
     focus: [
       "M&A integration",
-      "Restructuring",
+      "Organization  Restructuring",
       "Workforce transition",
       "Leadership transition",
-      "Change adoption",
+      "Culture & change",
       "Process transformation",
       "Governance",
-      "Sustainability of the future state",
     ],
     secondaryImage:
       "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85",
-    outcome:
-      "Successful transition, lasting adoption and a sustainable future state.",
+    outcome: "A future-ready organization built for whats’s next.",
     icon: "⌁",
   },
   future: {
     number: "",
-    title: "Today → Tomorrow",
-    intro: "From the current state to the organization of the future.",
+    title: "DIGITAL → ENABLEMENT",
+    intro:
+      "Translating transformation into digitally enabled organizations and ways of working",
     image:
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1800&q=85",
     challenge:
-      "The future is not something you inherit — it's something you design. Digital, technology and new operating models are reshaping what is possible.",
+      "The Challenge : Often digital transformation is about changing the digital platform ,without understanding of current state  of people and process and its change impact , leading to manpower cost , time and frustration.",
     approach:
-      "We help you build future-ready capabilities, adopt technology, and create the organization for what's next.",
+      "Our Approach: We help you design AS IS to TO BE  people , process &digital journey , stay throughout journey as transistion partner , build the culture for readiness and digital platform adoption.",
     focus: [
-      "Future-state organization",
-      "New operating models",
-      "Digital transformation",
-      "AI-enabled organization",
+      "Process transformation",
       "Technology adoption",
-      "Capability building",
-      "Future leadership",
-      "Transformation readiness",
+      "People management ",
+      "AI-enabled organizational transformation",
     ],
     secondaryImage:
       "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1000&q=85",
-    outcome: "A more ready organization built for what's next.",
+    outcome:
+      "Connect technology with people and processes so digital transformation becomes embedded in the business.",
     icon: "◈",
   },
 };

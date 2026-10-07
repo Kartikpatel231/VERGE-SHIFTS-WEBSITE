@@ -44,32 +44,32 @@ const journeys = [
   {
     image: images.strategy,
     eyebrow: "",
-    title: "Strategy →",
-    subtitle: "Transformation",
+    title: "STRATEGY →",
+    subtitle: "TRANSFORMATION",
     path: "/strategy-transformation",
   },
 
   {
     image: images.people,
     eyebrow: "",
-    title: "People →",
-    subtitle: "Performance",
+    title: "PEOPLE →",
+    subtitle: "PERFORMANCE",
     path: "/people-performance",
   },
 
   {
     image: images.change,
     eyebrow: "",
-    title: "Change →",
-    subtitle: "Sustainability",
+    title: "TRANSITION → ",
+    subtitle: "CONTINUITY",
     path: "/change-sustainability",
   },
 
   {
     image: images.future,
     eyebrow: "",
-    title: "Today →",
-    subtitle: "Tomorrow",
+    title: "DIGITAL → ",
+    subtitle: "ENABLEMENT",
     path: "/today-tomorrow",
   },
 ];
@@ -106,23 +106,23 @@ const contexts = [
 const approach = [
   [
     "01",
-    "Understand",
-    "Deep dive into your business, people and market context.",
+    "Diagnose",
+    "Deep dive to understand what organization want to achieve , identify the gap and define the transformation imperative.We align leadership strategic intent to Cuture , Organization design  & Operating Model , People Capablity & Mindsets , Technology",
   ],
   [
     "02",
-    "Align",
-    "Build shared clarity, priorities and success measures.",
+    "Design",
+    "Co-create the transformation blueprint — Linking strategy to transformation roadmap, and governance model.",
   ],
   [
     "03",
-    "Design",
-    "Co-create the right strategy, model and solutions.",
+    "Deploy",
+    "Execute with precision — build capablity , mobilise teams, manage change, and track progress.",
   ],
   [
     "04",
-    "Transition",
-    "Enable adoption, build capability and embed sustainable outcomes.",
+    "Delivery",
+    "Embed the change, mindsets &cultural shifts ,  measure outcomes, and ensure the transformation endures.",
   ],
 ];
 
@@ -500,12 +500,13 @@ function Home() {
               </p>
 
               <h2>
-                From insight to impact.
+                Right shift at right time 
               </h2>
 
               <p>
-                A structured, pragmatic approach to turn
-                strategic intent into lasting transformation.
+                Vergeshifts brings together areas 
+                that are often addressed separately ,
+                 we customize to the need of the organization
               </p>
 
             </div>
@@ -527,9 +528,9 @@ function Home() {
 
                     <div>
 
-                      <h3>
+                      <h2>
                         {title}
-                      </h3>
+                      </h2>
 
                       <p>
                         {copy}

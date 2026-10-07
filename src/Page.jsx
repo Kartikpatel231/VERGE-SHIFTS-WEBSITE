@@ -97,6 +97,8 @@ function Page({ page }) {
         </div>
 
         <div className="tagline">
+           <strong>VERGE SHIFTS</strong>
+           <br></br>
           FROM BOARDROOM TO DIGITAL
         </div>
 
