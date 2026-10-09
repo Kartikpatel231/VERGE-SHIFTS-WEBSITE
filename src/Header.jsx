@@ -93,6 +93,14 @@ function Header() {
           >
             Home
           </Link>
+          <Link
+            to="/#shifts"
+           // onClick={closeMenu}
+            onClick={() => handleSectionClick("shifts")}
+          >
+            The Shifts{" "}
+            <span className="chevron">⌄</span>
+          </Link>
 
           {/* THE SHIFTS */}
          
@@ -109,29 +117,22 @@ function Header() {
           </Link>
 
           {/* ABOUT */}
-          <Link
-            to="/#about"
+          {/* <Link
+            to="/#approach"
            // onClick={closeMenu}
-             onClick={() => handleSectionClick("about")}
+             onClick={() => handleSectionClick("approach")}
           >
             Approach
-          </Link>
- <Link
-            to="/#shifts"
-           // onClick={closeMenu}
-            onClick={() => handleSectionClick("shifts")}
-          >
-            The Shifts{" "}
-            <span className="chevron">⌄</span>
-          </Link>
+          </Link> */}
+ 
           {/* INSIGHTS */}
-          {/* <Link
+        <Link
             to="/#insights"
             // onClick={closeMenu}
              onClick={() => handleSectionClick("insights")}
           >
-            Insights
-          </Link> */}
+           Our Approach
+          </Link> 
 
           {/* CONTACT PAGE */}
           {/* <Link

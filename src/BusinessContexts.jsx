@@ -5,6 +5,7 @@ import {
   Handshake,
   Globe,
   Layers,
+  ArrowRight,
   GitCompare,
   Network,
   Cpu,

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
 
 :root {
@@ -683,4 +684,294 @@ blockquote cite {
   .founder { grid-template-columns: 1fr; }
   .founder-image { min-height: 260px; }
   .founder-main { padding: 23px; }
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+/* ================================================== */
+/* OVERRIDE-PROOF HERO / INTRO SECTION                */
+/* ================================================== */
+
+section#hero-intro,
+.vs-hero-section {
+  --vs-sage-green: #1D6E6B; /* Target Green Color */
+  --vs-navy: #0B2D3A;
+  --vs-border: #E2E8F0;
+  --vs-white: #FFFFFF;
+  --vs-font-head: 'Montserrat', sans-serif;
+  --vs-font-body: 'Plus Jakarta Sans', sans-serif;
+
+  padding: 4.5rem 0 !important;
+  background-color: var(--vs-white) !important;
+  width: 100% !important;
+  display: block !important;
+  box-sizing: border-box !important;
+}
+
+#hero-intro .vs-hero-container {
+  width: 100% !important;
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  padding: 0 1.5rem !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+}
+
+/* Paragraphs Override - Green Color applied */
+#hero-intro p.vs-eyebrow {
+  font-family: var(--vs-font-head) !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.2em !important;
+  color: var(--vs-sage-green) !important; /* FORCED GREEN */
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+}
+
+/* Heading Styling */
+#hero-intro h1 {
+  font-family: var(--vs-font-head) !important;
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem) !important;
+  font-weight: 700 !important;
+  color: var(--vs-navy) !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.025em !important;
+  margin: 1.25rem 0 !important;
+  padding: 0 !important;
+}
+
+#hero-intro h1 em {
+  font-style: italic !important;
+  font-weight: 600 !important;
+}
+
+/* Center Accent Line */
+#hero-intro .accent-line {
+  width: 60px !important;
+  height: 3px !important;
+  background-color: var(--vs-sage-green) !important;
+  margin: 1.5rem auto !important;
+  border-radius: 2px !important;
+}
+
+/* Responsive Overrides */
+@media (max-width: 640px) {
+  section#hero-intro,
+  .vs-hero-section {
+    padding: 3rem 0 !important;
+  }
+
+  #hero-intro p.vs-eyebrow {
+    font-size: 0.75rem !important;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+/* Main Page Container Scope */
+#vs-page-wrapper {
+  --vs-navy: #0B2D3A;
+  --vs-sage: #1D6E6B;
+  --vs-light-teal: #EAF4F4;
+  --vs-slate-500: #64748B;
+  --vs-slate-800: #1E293B;
+  --vs-border: #E2E8F0;
+  --vs-bg-light: #F8FAFC;
+  --vs-white: #FFFFFF;
+  --vs-font-head: 'Montserrat', sans-serif;
+  --vs-font-body: 'Plus Jakarta Sans', sans-serif;
+
+  font-family: var(--vs-font-body) !important;
+  color: var(--vs-slate-800) !important;
+  background-color: var(--vs-white) !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+#vs-page-wrapper * {
+  box-sizing: border-box !important;
+}
+
+/* Page Inner Layout */
+#vs-page-wrapper .vs-detail-container {
+  max-width: 1140px !important;
+  margin: 0 auto !important;
+  padding: 3.5rem 1.5rem 5rem !important;
+}
+
+/* Hero Section */
+#vs-page-wrapper .vs-detail-hero {
+  position: relative !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  min-height: 380px !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  padding: 3rem !important;
+  background-size: cover !important;
+  background-position: center !important;
+  margin-bottom: 3.5rem !important;
+  box-shadow: 0 12px 32px rgba(11, 45, 58, 0.12) !important;
+}
+
+#vs-page-wrapper .vs-hero-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(180deg, rgba(11, 45, 58, 0.2) 0%, rgba(11, 45, 58, 0.92) 100%) !important;
+  z-index: 1 !important;
+}
+
+#vs-page-wrapper .vs-hero-content {
+  position: relative !important;
+  z-index: 2 !important;
+  max-width: 720px !important;
+  color: var(--vs-white) !important;
+}
+
+#vs-page-wrapper .vs-hero-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  background: rgba(29, 110, 107, 0.9) !important;
+  color: var(--vs-white) !important;
+  padding: 0.35rem 0.85rem !important;
+  border-radius: 6px !important;
+  font-family: var(--vs-font-head) !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 1rem !important;
+}
+
+#vs-page-wrapper .vs-hero-title {
+  font-family: var(--vs-font-head) !important;
+  font-size: clamp(2rem, 4vw, 3rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  margin: 0 0 0.85rem 0 !important;
+  letter-spacing: -0.02em !important;
+}
+
+#vs-page-wrapper .vs-hero-intro {
+  font-size: 1.15rem !important;
+  line-height: 1.6 !important;
+  color: #E2E8F0 !important;
+  margin: 0 !important;
+}
+
+/* Two Column Content Grid */
+#vs-page-wrapper .vs-content-grid {
+  display: grid !important;
+  grid-template-columns: 1.2fr 1fr !important;
+  gap: 3.5rem !important;
+  align-items: start !important;
+}
+
+/* Blocks */
+#vs-page-wrapper .vs-section-block {
+  margin-bottom: 2.5rem !important;
+}
+
+#vs-page-wrapper .vs-block-title {
+  font-family: var(--vs-font-head) !important;
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  color: var(--vs-navy) !important;
+  margin: 0 0 0.85rem 0 !important;
+  padding-bottom: 0.5rem !important;
+  border-bottom: 2px solid var(--vs-sage) !important;
+  display: inline-block !important;
+}
+
+#vs-page-wrapper .vs-block-body {
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+  color: var(--vs-slate-500) !important;
+  margin: 0 !important;
+}
+
+/* Focus List */
+#vs-page-wrapper .vs-focus-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 1.25rem 0 0 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.75rem !important;
+}
+
+#vs-page-wrapper .vs-focus-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.85rem !important;
+  background-color: var(--vs-bg-light) !important;
+  border: 1px solid var(--vs-border) !important;
+  padding: 0.85rem 1.15rem !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  color: var(--vs-slate-800) !important;
+}
+
+#vs-page-wrapper .vs-focus-icon {
+  color: var(--vs-sage) !important;
+  font-size: 1rem !important;
+}
+
+/* Secondary Image & Outcome Box */
+#vs-page-wrapper .vs-side-card {
+  background: var(--vs-white) !important;
+  border: 1px solid var(--vs-border) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 16px rgba(11, 45, 58, 0.05) !important;
+}
+
+#vs-page-wrapper .vs-side-img {
+  width: 100% !important;
+  height: 240px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+#vs-page-wrapper .vs-outcome-box {
+  padding: 1.75rem !important;
+  background-color: var(--vs-navy) !important;
+  color: var(--vs-white) !important;
+}
+
+#vs-page-wrapper .vs-outcome-label {
+  font-family: var(--vs-font-head) !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  color: #4DE0D9 !important;
+  text-transform: uppercase !important;
+  margin-bottom: 0.5rem !important;
+  display: block !important;
+}
+
+#vs-page-wrapper .vs-outcome-text {
+  font-size: 1.05rem !important;
+  line-height: 1.55 !important;
+  margin: 0 !important;
+  font-weight: 500 !important;
+}
+
+/* Responsive Rules */
+@media (max-width: 868px) {
+  #vs-page-wrapper .vs-content-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+
+  #vs-page-wrapper .vs-detail-hero {
+    padding: 1.75rem !important;
+    min-height: 300px !important;
+  }
 }

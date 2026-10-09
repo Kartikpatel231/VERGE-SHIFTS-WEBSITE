@@ -1,5 +1,5 @@
 import React from "react";
-
+import './journeyDetail.css'
 function Page({ page }) {
   return (
     <main className="page-shell">
@@ -86,7 +86,7 @@ function Page({ page }) {
 
       <footer>
 
-        <div className="brand-mark">
+        {/* <div className="brand-mark">
           <span className="brand-symbol">
             V
           </span>
@@ -94,13 +94,13 @@ function Page({ page }) {
           <span>
             VERGE SHIFTS
           </span>
-        </div>
+        </div> */}
 
-        <div className="tagline">
+        {/* <div className="tagline">
            <strong>VERGE SHIFTS</strong>
            <br></br>
           FROM BOARDROOM TO DIGITAL
-        </div>
+        </div> */}
 
       </footer>
 

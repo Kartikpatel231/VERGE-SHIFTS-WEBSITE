@@ -3,8 +3,7 @@ export const pages = {
     number: "",
     title: "Strategy → Transformation",
     intro: "Turning strategic intent into an executable transformation agenda.",
-    image:
-      "https://images.unsplash.com/photo-1557159557-7a93eaadf72a?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/strategy.png",
     challenge:
       "Great strategies create direction. But turning intent into real, lasting change requires more than a plan — it requires alignment, structure and execution.",
     approach:
@@ -27,8 +26,7 @@ export const pages = {
     number: "",
     title: "People → Performance",
     intro: "From capablity to measurable business performance.",
-    image:
-      "https://images.unsplash.com/photo-1779896412109-1b221c2b350b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/people.png",
     challenge:
       "Talent, leadership and culture are critical to transformation, but often underestimated, misaligned or not fully activated.",
     approach:
@@ -36,10 +34,10 @@ export const pages = {
     focus: [
       "Leadership alignment",
       "Organization effectiveness",
-      "Talent & Plannery",
+      "Talent & Succession planning",
       "Recruitment and selection",
       "Performance architecture",
-      "Coaching",
+      "Culture & mindset Coaching",
       "Capability building and transitions",
     ],
     secondaryImage:
@@ -51,8 +49,7 @@ export const pages = {
     number: "",
     title: "TRANSITION → CONTINUITY",
     intro: "Navigating the complexity of moving from one state to another.",
-    image:
-      "https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=1800&q=85",
+    image: "/transition.png",
     challenge:
       "Change is complex -and often fragile. What worked yesterday, may not work tommorrow. Without right approach , change can create fatigue & resistance.",
     approach:
@@ -76,8 +73,7 @@ export const pages = {
     title: "DIGITAL → ENABLEMENT",
     intro:
       "Translating transformation into digitally enabled organizations and ways of working",
-    image:
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1800&q=85",
+    image: "digitaltr.png",
     challenge:
       "The Challenge : Often digital transformation is about changing the digital platform ,without understanding of current state  of people and process and its change impact , leading to manpower cost , time and frustration.",
     approach:
