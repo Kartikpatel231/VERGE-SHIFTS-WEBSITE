@@ -17,7 +17,7 @@ function Brand({ footer = false }) {
 
       <span className="brand-copy">
         <strong>VERGE SHIFTS</strong>
-        <small>Transformation &amp; Transition Management</small>
+        <small>Transformation &amp;  <br></br>  Transition Management</small>
       </span>
     </Link>
   );
