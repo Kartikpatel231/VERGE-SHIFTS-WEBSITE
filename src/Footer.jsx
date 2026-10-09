@@ -44,7 +44,7 @@ const Footer = () => {
               />
               <div className="vs-brand-text">
                 {/* <strong>VERGE SHIFTS</strong> */}
-                <h4>Transformation &amp; Transition Management</h4>
+                <h4>Transformation &amp;  <br></br> Transition Management</h4>
               </div>
             </Link>
             <p className="vs-brand-tagline">
