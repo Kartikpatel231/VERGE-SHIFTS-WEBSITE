@@ -47,10 +47,11 @@ const Footer = () => {
                 <h4>Transformation &amp;  <br></br> Transition Management</h4>
               </div>
             </Link>
-            <p className="vs-brand-tagline">
-              Partnering with Boards, CEOs, and leadership teams to navigate 
-              critical business shifts from Boardroom to Digital.
-            </p>
+            <h3 className="vs-brand-tagline">
+               Boardroom to Digital
+              {/* Partnering with Boards, CEOs, and leadership teams to navigate 
+              critical business shifts from Boardroom to Digital. */}
+            </h3>
             <div className="vs-social-links">
               <a
                 href="https://linkedin.com"
@@ -92,26 +93,26 @@ const Footer = () => {
           </div>
 
           {/* Column 2: Quick Links */}
-          <div className="vs-footer-col">
+          {/* <div className="vs-footer-col">
             <h4 className="vs-footer-heading">Navigation</h4>
             <ul className="vs-footer-links">
               <li>
                 <Link to="/" onClick={scrollToTop}>Home</Link>
-              </li>
+              </li> */}
               {/* <li>
                 <Link to="/about" onClick={scrollToTop}>About Us</Link>
               </li> */}
-              <li>
+              {/* <li>
                 <Link to="/approach" onClick={scrollToTop}>Our Approach</Link>
-              </li>
+              </li> */}
               {/* <li>
                 <Link to="/insights" onClick={scrollToTop}>Insights & Perspective</Link>
               </li> */}
-              <li>
+              {/* <li>
                 <Link to="/contact" onClick={scrollToTop}>Contact</Link>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Column 3: The Four Shifts */}
           <div className="vs-footer-col">

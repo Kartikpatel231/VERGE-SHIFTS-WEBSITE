@@ -723,3 +723,107 @@ h2 {
 #insights {
   scroll-margin-top: 100px;
 }
+
+/* ==============================
+   PAGE HERO
+============================== */
+
+.hero-content .page-number {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.hero-content h1 {
+  font-size: clamp(42px, 5vw, 68px);
+  line-height: 1.15;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.hero-content p {
+  font-size: clamp(20px, 2vw, 26px);
+  line-height: 1.6;
+  max-width: 850px;
+}
+
+/* ==============================
+   CHALLENGE & APPROACH
+============================== */
+
+.intro-grid h2 {
+  font-size: clamp(28px, 3vw, 38px);
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.intro-grid p {
+  font-size: 19px;
+  line-height: 1.9;
+}
+
+/* ==============================
+   KEY FOCUS AREAS
+============================== */
+
+.focus-copy h2 {
+  font-size: clamp(30px, 3vw, 40px);
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+
+.focus-copy ul {
+  padding-left: 24px;
+}
+
+.focus-copy li {
+  font-size: 19px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+/* ==============================
+   OUTCOME SECTION
+============================== */
+
+.outcome h2 {
+  font-size: clamp(28px, 3vw, 36px);
+  line-height: 1.3;
+  margin-bottom: 14px;
+}
+
+.outcome p {
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.outcome-icon {
+  font-size: 42px;
+}
+
+/* ==============================
+   RESPONSIVE FONT SIZES
+============================== */
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-content p {
+    font-size: 19px;
+  }
+
+  .intro-grid h2,
+  .focus-copy h2,
+  .outcome h2 {
+    font-size: 28px;
+  }
+
+  .intro-grid p,
+  .focus-copy li,
+  .outcome p {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+}
