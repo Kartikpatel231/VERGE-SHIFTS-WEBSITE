@@ -20,7 +20,7 @@ export const pages = {
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=85",
     outcome:
       "A clear transformation agenda and an organization readiness  to execute it.",
-    icon: "✦",
+    icon: "♧",
   },
   people: {
     number: "",
@@ -66,7 +66,7 @@ export const pages = {
     secondaryImage:
       "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85",
     outcome: "A future-ready organization built for whats’s next.",
-    icon: "⌁",
+    icon: "♧",
   },
   future: {
     number: "",
@@ -88,6 +88,6 @@ export const pages = {
       "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1000&q=85",
     outcome:
       "Connect technology with people and processes so digital transformation becomes embedded in the business.",
-    icon: "◈",
+    icon: "♧",
   },
 };
