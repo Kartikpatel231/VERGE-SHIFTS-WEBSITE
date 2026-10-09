@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // import "./styles.css";
 import "./layourt.css"
+import "./ShiftsSection.css"
+import "./ContextsSection.css"
+import "./PerspectiveSection.css";
+import "./ApproachSection.css";
 import {
   TrendingUp,
   Handshake,
@@ -10,7 +14,15 @@ import {
   GitCompare,
   Network,
   Cpu,
+  ArrowRight,
   BarChart3,
+   Mail,
+  Phone,
+  MapPin,
+  Sparkles,
+  ShieldCheck,
+  Compass,
+  Users,
 } from "lucide-react";
 import {
   FaInstagram,
@@ -74,33 +86,64 @@ const journeys = [
   },
 ];
 
-// const contexts = [
-//   "Growth",
-//   "M&A",
-//   "Expansion",
-//   "Integration",
-//   "Restructuring",
-//   "New Operating Model",
-//   "Digital Transformation",
-// ];
-// import {
-//   TrendingUp,
-//   Handshake,
-//   Globe,
-//   Layers,
-//   GitCompare,
-//   Network,
-//   Cpu,
-//   BarChart3,
-// } from "lucide-react";
+const BRAND_IMAGES = {
+  hero: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=85",
+  strategy: "/strategy.png",
+ // people: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=85",
+   people:"/people.png",
+  change: "/transition.png",
+  future: "/digitaltr.png",
+  approachVisual: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=85",
+  ctaBg: "https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1800&q=85"
+};
+
+const JOURNEYS = [
+  {
+    id: "strategy",
+    title: "STRATEGY →",
+    subtitle: "TRANSFORMATION",
+       path: "/strategy-transformation",
+    description: "Aligning leadership intent with actionable organizational design and operating models.",
+    image: BRAND_IMAGES.strategy,
+    metrics: "+40% Operational Efficiency"
+  },
+  {
+    id: "people",
+    title: "PEOPLE →",
+    subtitle: "PERFORMANCE",
+      path: "/people-performance",
+    description: "Mobilizing leadership mindsets, capability building, and sustaining cultural agility.",
+    image: BRAND_IMAGES.people,
+    metrics: "95% Leadership Alignment"
+  },
+  {
+    id: "transition",
+    title: "TRANSITION →",
+    subtitle: "CONTINUITY",
+     path: "/change-sustainability",
+    description: "Navigating M&A, restructuring, and change management without loss of momentum.",
+    image: BRAND_IMAGES.change,
+    metrics: "Zero Disruption Rollouts"
+  },
+  {
+    id: "digital",
+    title: "DIGITAL →",
+    subtitle: "ENABLEMENT",
+      path: "/today-tomorrow",
+    description: "Connecting tech investments with human behavior to capture full digital ROI.",
+    image: BRAND_IMAGES.future,
+    metrics: "3.5x Digital ROI Captures"
+  }
+];
+
 const contexts = [
-  { label: "Growth", icon: BarChart3 },
-  { label: "M&A", icon: Handshake },
-  { label: "Expansion", icon: Globe },
-  { label: "Integration", icon: GitCompare },
-  { label: "Restructuring", icon: Network },
-  { label: "New Operating Model", icon:  Layers},
-  { label: "Digital Transformation", icon: Cpu },
+  { label: "Growth", icon: BarChart3, desc: "Scaling operating models rapidly for market expansion." },
+  { label: "M&A", icon: Handshake, desc: "Harmonizing cultures and unifying post-merger entities." },
+  { label: "Expansion", icon: Globe, desc: "Adapting governance models across global territories." },
+  { label: "Integration", icon: GitCompare, desc: "Streamlining technology stacks and organizational roles." },
+  { label: "Restructuring", icon: Network, desc: "Rebuilding organizational resiliency under market shifts." },
+  { label: "New Operating Model", icon: Layers, desc: "Designing agile, cross-functional organizational architectures." },
+  { label: "Digital Transformation", icon: Cpu, desc: "Translating digital strategies into frontline habits." }
 ];
 
 const approach = [
@@ -130,24 +173,7 @@ const approach = [
 
 function Brand({ footer = false }) {
   return (
-    // <Link
-    //   className={`brand ${footer ? "brand--footer" : ""}`}
-    //   to="/"
-    //   aria-label="Verge Shifts home"
-    // >
-    //   {/* <span className="brand-mark" aria-hidden="true">
-    //     <span />
-    //     <span />
-    //   </span> */}logo.png
-
-    //   <span className="brand-copy">
-    //     <strong>VERGE SHIFTS</strong>
-
-    //     <small>
-    //       Transformation &amp; Transition Management
-    //     </small>
-    //   </span>
-    // </Link>
+  
     <Link
   className={`brand ${footer ? "brand--footer" : ""}`}
   to="/"
@@ -209,87 +235,6 @@ function Home() {
   return (
     <div className="site-shell" id="top">
 
-      {/* HEADER */}
-      {/* <header className="site-header">
-
-        <div className="container header-inner">
-
-          <Brand />
-
-          <button
-            className="menu-toggle"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-expanded={menuOpen}
-            aria-label="Toggle navigation"
-          >
-            <span />
-            <span />
-          </button>
-
-          <nav
-            className={`main-nav ${
-              menuOpen ? "main-nav--open" : ""
-            }`}
-            aria-label="Primary navigation"
-          >
-
-            <a
-              className="active"
-              href="#top"
-              onClick={closeMenu}
-            >
-              Home
-            </a>
-
-            <a
-              href="#shifts"
-              onClick={closeMenu}
-            >
-              The Shifts{" "}
-              <span className="chevron">⌄</span>
-            </a>
-
-            <a
-              href="#contexts"
-              onClick={closeMenu}
-            >
-              Contexts
-            </a>
-
-            <a
-              href="#about"
-              onClick={closeMenu}
-            >
-              About Ria
-            </a>
-
-            <a
-              href="#insights"
-              onClick={closeMenu}
-            >
-              Insights
-            </a>
-
-            <a
-              href="#contact"
-              onClick={closeMenu}
-            >
-              Contact
-            </a>
-
-            <a
-              className="header-cta"
-              href="#contact"
-              onClick={closeMenu}
-            >
-              Get in Touch <Arrow />
-            </a>
-
-          </nav>
-
-        </div>
-
-      </header> */}
 
       <main>
 
@@ -303,9 +248,9 @@ function Home() {
 
           <div className="container hero-content1">
 
-             <p className="eyebrow eyebrow--light">
-              VERGE SHIFTS
-            </p> 
+             <p className="vs-eyebrow" style={{ color: "#1D6E6B" }}>
+      VERGE SHIFTS
+    </p>
 
             <h1>
             <em> Transformation is a journey.</em>
@@ -316,9 +261,9 @@ function Home() {
 
             <div className="accent-line" />
 
-            <p className="hero-kicker">
-              From Boardroom to Digital
-            </p>
+            <p className="hero-kicker" style={{ color: "#1D6E6B" }}>
+      From Boardroom to Digital
+    </p>
 
           </div>
 
@@ -328,87 +273,212 @@ function Home() {
 
 
         {/* THE SHIFTS */}
-        <section className="section shifts-intro" id="shifts-intro">
-        <div className="container shifts-intro-content">
-          <p className="eyebrow">OUR PERSPECTIVE</p>
-          <h1 className="shifts-headline">
-            At the verge of every major business shift, there is complexity. We help leadership navigate it.
-          </h1>
-          <p className="shifts-description">
-            <strong>Verge Shifts</strong> partners with Boards, CEOs, and leadership teams to navigate critical transformation and transition journeys — turning strategic intent into organizational, operational, technological, and people shifts, and ultimately into execution.
-          </p>
-        </div>
-      </section>
-        <section
-          className="section shifts"
-          id="shifts"
+       {/* OUR PERSPECTIVE - SPLIT LAYOUT */}
+
+     {/* THE SHIFTS */}
+<section id="shifts" className="vs-shifts-grid-section" style={{
+    padding: "2rem 0",           /* 1. Reduces top & bottom section height */
+    backgroundColor: "#ffffff",
+    width: "100%",
+margin: "-30 auto",
+  }}>
+  <div className="vs-container">
+    <div className="vs-shifts-header">
+      <p className="vs-eyebrow">THE SHIFTS WE NAVIGATE</p>
+      <h2 className="vs-shifts-title">Four transformation journeys.</h2>
+      <p className="vs-shifts-subtitle">Four integrated journey , People-centric , Built for what next</p>
+    </div>
+
+    {/* 4 Pillars Grid */}
+    <div className="vs-journey-grid">
+      {JOURNEYS.map((journey) => (
+        // <div
+        //   key={journey.id}
+        //   className="vs-journey-card"
+        // >
+        //   {/* Background Image Container */}
+        //   <div
+        //     className="vs-card-bg"
+        //     style={{ backgroundImage: `url("${journey.image}")` }}
+        //   />
+
+        //   {/* Dark Overlay */}
+        //   <div className="vs-card-overlay" />
+
+        //   {/* Card Content */}
+        //   <div className="vs-card-content">
+        //     <span className="vs-card-tag">Transformation Pillar</span>
+
+        //     <h3 className="vs-card-title">
+        //       <span className="vs-title-main">{journey.title}</span>
+        //       <span className="vs-title-sub">{journey.subtitle}</span>
+        //     </h3>
+
+        //     <p className="vs-card-description">{journey.description}</p>
+
+        //     <div className="vs-card-footer">
+        //       <span className="vs-action-text">View Blueprint</span>
+        //       <ArrowRight className="vs-action-icon" size={16} />
+        //     </div>
+        //   </div>
+        // </div>
+        <Link
+          key={journey.id}
+          to={journey.path}
+          className="vs-journey-card"
+          style={{ textDecoration: "none", color: "inherit", display: "flex" }}
         >
+          {/* Background Image Container */}
+          <div
+            className="vs-card-bg"
+            style={{ backgroundImage: `url("${journey.image}")` }}
+          />
 
-          <div className="container shifts-layout">
+          {/* Dark Overlay */}
+          <div className="vs-card-overlay" />
 
-            <div className="section-intro">
+          {/* Card Content */}
+          <div className="vs-card-content">
+            <span className="vs-card-tag">Transformation Pillar</span>
 
-              <p className="eyebrow">
-                THE SHIFTS WE NAVIGATE
-              </p>
+            <h3 className="vs-card-title">
+              <span className="vs-title-main">{journey.title}</span>
+              <span className="vs-title-sub">{journey.subtitle}</span>
+            </h3>
 
-              <h2>
-                Four transformation journeys.
-              </h2>
+            <p className="vs-card-description">{journey.description}</p>
 
-              <p>
-               People-centric. Built for what’s next.
-              </p>
-
+            <div className="vs-card-footer">
+              <span className="vs-action-text">View Blueprint</span>
+              <ArrowRight className="vs-action-icon" size={16} />
             </div>
-
-
-            <div className="journey-grid">
-
-              {journeys.map((journey) => (
-
-                <Link
-                  className="journey-card"
-                  to={journey.path}
-                  key={journey.title}
-                  onClick={closeMenu}
-                  style={{
-                    "--card-image": `url(${journey.image})`,
-                  }}
-                >
-
-                  <span className="journey-shade" />
-
-                  <span className="journey-label">
-
-                    <small>
-                      {journey.eyebrow}
-                    </small>
-
-                    <strong>
-                      {journey.title}
-                      <br />
-                      {journey.subtitle}
-                    </strong>
-
-                  </span>
-
-                  <Arrow />
-
-                </Link>
-
-              ))}
-
-            </div>
-
           </div>
+        </Link>
+      ))}
+    </div>
+  </div>
+</section>
+{/* <section 
+  className="vs-perspective-section" 
+  id="shifts-intro" 
+  style={{
+    padding: "2rem 0",
+    backgroundColor: "#ffffff",
+    width: "100%", 
+    margin: "0 auto"
+  }}
+>
+  <div 
+    className="vs-perspective-container"
+    style={{
+      maxWidth: "1140px", 
+      margin: "0 auto",
+      padding: "0 1.5rem"
+    }}
+  >
+    <div 
+      className="vs-perspective-split"
+      style={{
+        display: "grid",
+     
+        gridTemplateColumns: "1fr 1.8fr", 
+        gap: "8.5rem", 
+        alignItems: "center"
+      }}
+    >
+           <div 
+        className="vs-perspective-content"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
+          textAlign: "left"
+        }}
+      >
+        <span 
+          className="vs-eyebrow" 
+          style={{ 
+            color: "#1D6E6B", 
+            marginBottom: "0.5rem",
+            fontWeight: "700",
+            fontSize: "0.85rem",
+            letterSpacing: "0.18em"
+          }}
+        >
+          OUR PERSPECTIVE
+        </span>
 
-        </section>
+        <p 
+          className="vs-perspective-description"
+          style={{
+            fontSize: "0.95rem",
+            lineHeight: "1.65",
+            color: "#64748B",
+            margin: "0 0 1rem 0"
+          }}
+        >
+          <span style={{ display: "block", color: "#0B2D3A", marginBottom: "0.5rem" }}>
+               At the verge of every major business shift, there is complexity. We help leadership navigate it.
+       
+             </span>
 
+          <strong style={{ color: "#0B2D3A" }}>Verge Shifts</strong> partners with Boards, CEOs, and leadership teams to navigate critical transformation and transition journeys — turning strategic intent into organizational, operational, technological, and people shifts, and ultimately into execution.
+        </p>
 
+       
+        <div 
+          className="vs-perspective-highlights"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "0.5rem",
+            width: "100%",
+            paddingTop: "0.75rem",
+            borderTop: "1px solid #E2E8F0"
+          }}
+        >
+          <div className="vs-highlight-item" style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.85rem", color: "#1E293B", fontWeight: "600" }}>
+            <span className="vs-highlight-dot" style={{ width: "6px", height: "6px", borderRadius: "50%", backgroundColor: "#1D6E6B", flexShrink: 0 }} />
+            <span>Strategic Intent to Realized Outcomes</span>
+          </div>
+          <div className="vs-highlight-item" style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.85rem", color: "#1E293B", fontWeight: "600" }}>
+            <span className="vs-highlight-dot" style={{ width: "6px", height: "6px", borderRadius: "50%", backgroundColor: "#1D6E6B", flexShrink: 0 }} />
+            <span>People-Centric Transformation Frameworks</span>
+          </div>
+          <div className="vs-highlight-item" style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.85rem", color: "#1E293B", fontWeight: "600" }}>
+            <span className="vs-highlight-dot" style={{ width: "6px", height: "6px", borderRadius: "50%", backgroundColor: "#1D6E6B", flexShrink: 0 }} />
+            <span>Zero-Disruption Transition & Continuity</span>
+          </div>
+        </div>
+      </div>
+      
+      <div 
+        className="vs-perspective-visual"
+        style={{ width: "100%", margin: 0 }}
+      >
+        <img
+          src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=85"
+          alt="Verge Shifts Leadership Perspective"
+          className="vs-perspective-img"
+          style={{
+            width: "100%",
+            height: "220px", 
+            objectFit: "cover",
+            borderRadius: "12px",
+            display: "block"
+          }}
+        />
+      </div>
+
+    
+ 
+
+    </div>
+  </div>
+</section> */}
         {/* CONTEXTS */}
         {/* CONTEXTS */}
-<section className="contexts" id="contexts">
+{/* <section className="contexts" id="contexts">
   <div className="container contexts-layout">
     <div className="contexts-intro">
       <p className="eyebrow">BUSINESS CONTEXTS</p>
@@ -429,64 +499,38 @@ function Home() {
       ))}
     </div>
   </div>
-</section>
-        {/* <section
-          className="contexts"
-          id="contexts"
-        >
+</section> */}
+    {/* CONTEXTS */}
+{/* CONTEXTS */}
+<section className="vs-contexts-section" id="contexts">
+  <div className="vs-contexts-container">
+    <div className="vs-contexts-layout">
+      
+      <div className="vs-contexts-intro">
+        <p className="vs-eyebrow">BUSINESS CONTEXTS</p>
+        <h2>Where we create impact.</h2>
+        <p>
+          Verge Shifts brings deep expertise across key business contexts
+          to help you navigate complexity and support in building your next
+          organization operating model.
+        </p>
+      </div>
 
-          <div className="container contexts-layout">
-
-            <div className="contexts-intro">
-
-              <p className="eyebrow">
-                BUSINESS CONTEXTS
-              </p>
-
-              <h2>
-                Where we create impact.
-              </h2>
-
-              <p>
-               Verge shifts bring deep expertise across key business contexts 
-               to help you navigate complexity and support in building your nextorganization operating model .
-              
-              </p>
-
-            </div>
-
-
-            <div className="context-list">
-
-              {contexts.map((context, index) => (
-
-                <div
-                  className="context-item"
-                  key={context}
-                >
-
-                  <span
-                    className={`context-icon icon-${index}`}
-                    aria-hidden="true"
-                  />
-
-                  <span>
-                    {context}
-                  </span>
-
-                </div>
-
-              ))}
-
-            </div>
-
+      <div className="vs-context-grid">
+        {contexts.map(({ label, icon: Icon }) => (
+          <div className="vs-context-item" key={label}>
+            <Icon className="vs-context-icon" size={26} strokeWidth={1.75} />
+            <span>{label}</span>
           </div>
+        ))}
+      </div>
 
-        </section> */}
-
+    </div>
+  </div>
+</section>
 
         {/* APPROACH */}
-        <section
+        {/* <section
           className="section approach"
           id="insights"
         >
@@ -553,216 +597,48 @@ function Home() {
 
           </div>
 
-        </section>
-
-
-        {/* FOUNDER */}
-        {/* <section
-          className="founder"
-          id="about"
-        >
-
-          <div
-            className="founder-image"
-            style={{
-              "--founder-image": `url(${images.ria})`,
-            }}
-            aria-label="Portrait placeholder for Ria Mohta"
-          />
-
-          <div className="founder-main">
-
-            <p className="eyebrow">
-              FOUNDER &amp; PRINCIPAL CONSULTANT
-            </p>
-
-            <h2>
-              Ria Mohta
-            </h2>
-
-            <p className="role-line">
-              CHRO&nbsp;&nbsp;•&nbsp;&nbsp;
-              TRANSFORMATION LEADER&nbsp;&nbsp;•&nbsp;&nbsp;
-              CONSULTANT
-            </p>
-
-            <p className="founder-copy">
-              With 24+ years of experience, Ria partners
-              with Boards, CEOs and leadership teams across
-              industries and geographies to navigate complex
-              transformation and transition.
-            </p>
-
-            <a
-              className="outline-button"
-              href="#contact"
-            >
-              Know More <Arrow />
-            </a>
-
-          </div>
-
-
-          <blockquote>
-            “People, process,
-            <br />
-            technology and
-            <br />
-            leadership — when
-            <br />
-            brought together —
-            <br />
-            create enduring value.”
-
-            <cite>
-              — Ria Mohta
-            </cite>
-
-          </blockquote>
-
-
-          <div className="founder-links">
-
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="founder-link"
-              aria-label="Instagram"
-            >
-              <FaInstagram />
-            </a>
-
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="founder-link"
-              aria-label="Facebook"
-            >
-              <FaFacebookF />
-            </a>
-
-            <a
-              href="https://www.linkedin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="founder-link"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedinIn />
-            </a>
-
-          </div>
-
-        </section>
-
-
-      
-        <section
-          className="cta-section"
-          id="contact"
-          style={{
-            "--cta-image": `url(${images.cta})`,
-          }}
-        >
-
-          <div className="cta-overlay" />
-
-          <div className="container cta-content">
-
-            <p className="eyebrow eyebrow--light">
-              LET’S SHAPE WHAT’S NEXT.
-            </p>
-
-            <p>
-              Get in touch to explore how VERGE SHIFTS
-              can support your transformation journey.
-            </p>
-
-            <div className="contact-details">
-
-              <a
-                href="mailto:connect@vergeshifts.com"
-                className="contact-email"
-              >
-                connect@vergeshifts.com
-              </a>
-
-              <a
-                href="mailto:ria@vergeshifts.com"
-                className="contact-email"
-              >
-                ria@vergeshifts.com
-              </a>
-
-            </div>
-
-            <a
-              className="light-button"
-              href="mailto:connect@vergeshifts.com"
-            >
-              Get in Touch <Arrow />
-            </a>
-
-          </div>
-
         </section> */}
 
+{/* OUR APPROACH */}
+{/* OUR APPROACH - COMPACT GRID */}
+<section  className="vs-approach-section" id="insights">
+  <div className="vs-approach-container">
+    
+    {/* Compact Side-by-Side Header */}
+    <div className="vs-approach-header">
+      <div className="vs-header-left">
+        <span className="vs-eyebrow">OUR APPROACH</span>
+        <h2>Right shift at the right time.</h2>
+      </div>
+      <p className="vs-header-right-p">
+        Vergeshifts brings together areas that are often addressed separately. We customize our methodology to match your exact organizational needs.
+      </p>
+    </div>
+
+    {/* Horizontal Step Cards */}
+    <div className="vs-approach-grid">
+      {approach.map(([number, title, copy], index) => (
+        <div className="vs-approach-card" key={number}>
+          
+          <div className="vs-card-top">
+            <span className="vs-card-number">STEP {number}</span>
+            {index < approach.length - 1 && (
+              <span className="vs-card-arrow">→</span>
+            )}
+          </div>
+
+          <h3 className="vs-card-title">{title}</h3>
+          <p className="vs-card-copy">{copy}</p>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
       </main>
 
 
-      {/* FOOTER */}
-      {/* <footer className="site-footer">
-
-        <div className="container footer-inner">
-
-          <Brand footer />
-
-          <div className="footer-links">
-
-            <a href="#top">
-              Home
-            </a>
-
-            <a href="#shifts">
-              The Shifts
-            </a>
-
-            <a href="#contexts">
-              Contexts
-            </a>
-
-            <a href="#about">
-              About Ria
-            </a>
-
-            <a href="#insights">
-              Insights
-            </a>
-
-            <a href="#contact">
-              Contact
-            </a>
-
-          </div>
-
-          <div className="footer-social">
-            <span>in</span>
-            <span>◎</span>
-          </div>
-
-          <p className="copyright">
-            © 2025 Verge Shifts. All rights reserved.
-          </p>
-
-          <p className="footer-tagline">
-            FROM BOARDROOM TO DIGITAL
-          </p>
-
-        </div>
-
-      </footer> */}
 
     </div>
   );

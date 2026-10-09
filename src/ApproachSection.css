@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+/* ================================================== */
+/* COMPACT & HORIZONTAL APPROACH SECTION               */
+/* ================================================== */
+
+section#insights,
+.vs-approach-section {
+  --vs-navy: #0B2D3A;
+  --vs-sage: #1D6E6B;
+  --vs-light-teal: #EAF4F4;
+  --vs-slate-500: #64748B;
+  --vs-slate-800: #1E293B;
+  --vs-border: #E2E8F0;
+  --vs-bg-light: #F8FAFC;
+  --vs-white: #FFFFFF;
+  --vs-font-head: 'Montserrat', sans-serif;
+  --vs-font-body: 'Plus Jakarta Sans', sans-serif;
+
+  padding: 3.5rem 0 !important; /* Compact vertical padding */
+  background-color: var(--vs-bg-light) !important;
+  border-bottom: 1px solid var(--vs-border) !important;
+  width: 100% !important;
+  display: block !important;
+  box-sizing: border-box !important;
+}
+
+/* Inner Container */
+#insights .vs-approach-container {
+  width: 100% !important;
+  max-width: 1240px !important;
+  margin: 0 auto !important;
+  padding: 0 1.5rem !important;
+  box-sizing: border-box !important;
+}
+
+/* Compact Header Layout */
+#insights .vs-approach-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-end !important;
+  margin-bottom: 2rem !important;
+  gap: 2rem !important;
+  flex-wrap: wrap !important;
+}
+
+#insights .vs-header-left {
+  max-width: 500px !important;
+}
+
+#insights .vs-eyebrow {
+  font-family: var(--vs-font-head) !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.18em !important;
+  color: var(--vs-sage) !important;
+  margin: 0 0 0.35rem 0 !important;
+  display: block !important;
+}
+
+#insights .vs-approach-header h2 {
+  font-family: var(--vs-font-head) !important;
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--vs-navy) !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#insights .vs-header-right-p {
+  font-family: var(--vs-font-body) !important;
+  font-size: 0.925rem !important;
+  line-height: 1.55 !important;
+  color: var(--vs-slate-500) !important;
+  max-width: 480px !important;
+  margin: 0 !important;
+}
+
+/* Horizontal Grid for Cards */
+#insights .vs-approach-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+  gap: 1.25rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Compact Card Box */
+#insights .vs-approach-card {
+  background-color: var(--vs-white) !important;
+  border: 1px solid var(--vs-border) !important;
+  border-radius: 12px !important;
+  padding: 1.5rem !important;
+  box-shadow: 0 2px 8px rgba(11, 45, 58, 0.03) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  transition: all 0.25s ease !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+}
+
+#insights .vs-approach-card:hover {
+  transform: translateY(-3px) !important;
+  border-color: var(--vs-sage) !important;
+  box-shadow: 0 10px 20px rgba(29, 110, 107, 0.08) !important;
+}
+
+/* Card Top Line: Number + Arrow Badge */
+#insights .vs-card-top {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-bottom: 1rem !important;
+}
+
+#insights .vs-card-number {
+  font-family: var(--vs-font-head) !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  color: var(--vs-sage) !important;
+  background-color: var(--vs-light-teal) !important;
+  padding: 0.25rem 0.65rem !important;
+  border-radius: 6px !important;
+}
+
+#insights .vs-card-arrow {
+  font-size: 1rem !important;
+  color: var(--vs-sage) !important;
+  opacity: 0.4 !important;
+  transition: opacity 0.25s ease, transform 0.25s ease !important;
+}
+
+#insights .vs-approach-card:hover .vs-card-arrow {
+  opacity: 1 !important;
+  transform: translateX(3px) !important;
+}
+
+/* Card Content */
+#insights .vs-card-title {
+  font-family: var(--vs-font-head) !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: var(--vs-navy) !important;
+  margin: 0 0 0.5rem 0 !important;
+  line-height: 1.3 !important;
+}
+
+#insights .vs-card-copy {
+  font-family: var(--vs-font-body) !important;
+  font-size: 0.875rem !important;
+  line-height: 1.55 !important;
+  color: var(--vs-slate-500) !important;
+  margin: 0 !important;
+}
+
+/* ================================================== */
+/* RESPONSIVE OVERRIDES                               */
+/* ================================================== */
+
+@media (max-width: 768px) {
+  #insights .vs-approach-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
+
+  #insights .vs-approach-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

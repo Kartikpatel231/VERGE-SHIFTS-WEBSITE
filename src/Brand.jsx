@@ -1,18 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./styles.css";
-
+// import "./styles.css";
+import "./footer.css";
 function Brand({ footer = false }) {
   return (
     <Link
-      className={`brand ${footer ? "brand--footer" : ""}`}
+      className={`vs-footer-brand ${footer ? "brand--footer" : ""}`}
       to="/"
       aria-label="Verge Shifts home"
     >
       <img
-        src="/logo1.png"
+        src="/logo.png"
         alt="Verge Shifts Logo"
-        className="brand-logo"
+        className="vs-footer-logo"
       />
 
       <span className="brand-copy">
