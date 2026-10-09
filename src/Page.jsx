@@ -1,5 +1,5 @@
 import React from "react";
-import './journeyDetail.css'
+
 function Page({ page }) {
   return (
     <main className="page-shell">
