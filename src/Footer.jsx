@@ -143,7 +143,7 @@ const Footer = () => {
 
           {/* Column 4: Contact Details */}
           <div className="vs-footer-col">
-            <h4 className="vs-footer-heading">Connect With Us</h4>
+            <h4 className="vs-footer-heading"> Get in Touch</h4>
             <ul className="vs-contact-info">
               <li>
                 <MapPin size={16} className="vs-info-icon" />

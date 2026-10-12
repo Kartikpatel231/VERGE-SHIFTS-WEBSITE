@@ -72,7 +72,7 @@ const Contact = () => {
 
         <section className="contact-hero">
           <div className="contact-hero-content">
-            <h1>Contact</h1>
+            <h1>Get in Touch</h1>
 
             <p>
               Ready to Lead Your Next Transformation?
