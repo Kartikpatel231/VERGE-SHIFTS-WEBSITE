@@ -15,10 +15,10 @@ function Brand({ footer = false }) {
         className="vs-footer-logo"
       />
 
-      <span className="brand-copy">
+      {/* <span className="brand-copy">
         <strong>VERGE SHIFTS</strong>
         <small>Transformation &amp;  <br></br>  Transition Management</small>
-      </span>
+      </span> */}
     </Link>
   );
 }

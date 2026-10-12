@@ -137,7 +137,8 @@
 }
 
 .vs-footer-logo {
-  height: 38px;
+ margin-top: 20px;
+  height: 70px;
   width: auto;
   object-fit: contain;
 }

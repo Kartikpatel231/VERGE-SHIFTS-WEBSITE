@@ -100,7 +100,7 @@ const BRAND_IMAGES = {
 const JOURNEYS = [
   {
     id: "strategy",
-    title: "STRATEGY →",
+    title: "STRATEGY  →",
     subtitle: "TRANSFORMATION",
        path: "/strategy-transformation",
     description: "Aligning leadership intent with actionable organizational design and operating models.",
@@ -109,7 +109,7 @@ const JOURNEYS = [
   },
   {
     id: "people",
-    title: "PEOPLE →",
+    title: "PEOPLE  →",
     subtitle: "PERFORMANCE",
       path: "/people-performance",
     description: "Mobilizing leadership mindsets, capability building, and sustaining cultural agility.",
@@ -118,7 +118,7 @@ const JOURNEYS = [
   },
   {
     id: "transition",
-    title: "TRANSITION →",
+    title: "TRANSITION  →",
     subtitle: "CONTINUITY",
      path: "/change-sustainability",
     description: "Navigating M&A, restructuring, and change management without loss of momentum.",
@@ -127,7 +127,7 @@ const JOURNEYS = [
   },
   {
     id: "digital",
-    title: "DIGITAL →",
+    title: "DIGITAL  →",
     subtitle: "ENABLEMENT",
       path: "/today-tomorrow",
     description: "Connecting tech investments with human behavior to capture full digital ROI.",
@@ -253,10 +253,11 @@ function Home() {
     </p>
 
             <h1>
-            <em> Transformation is a journey.</em>
+            <em> Transformation</em>
+            <em> <br></br>is a journey.</em>
               <br />
            
-              <em>We help you navigate it.</em>
+              <em>We help you to navigate it.</em>
             </h1>
 
             <div className="accent-line" />
@@ -274,6 +275,7 @@ function Home() {
 
         {/* THE SHIFTS */}
        {/* OUR PERSPECTIVE - SPLIT LAYOUT */}
+
 <section
   id="perspective"
   className="vs-shifts-grid-section"
@@ -281,39 +283,29 @@ function Home() {
     padding: "2rem 0",
     backgroundColor: "#ffffff",
     width: "100%",
-    margin: "-30 auto",
-  }}
->
- 
-<div
-  className="vs-container"
-  style={{
-    width: "100%",
-    maxWidth: "1200px",
-    margin: "0 auto",
-    padding: "10px 14px",
+    margin: "-30px auto",
     boxSizing: "border-box",
   }}
 >
   <div
+    className="vs-container"
     style={{
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      gap: "48px",
       width: "100%",
-      flexWrap: "wrap",
+      maxWidth: "1200px",
+      margin: "0 auto",
+      padding: "10px 14px",
+      boxSizing: "border-box",
     }}
   >
-    {/* LEFT SIDE - CONTENT */}
+    {/* FULL-WIDTH CONTENT */}
     <div
-      className="vs-shifts-header"
+      className="vs-perspective-content"
       style={{
-        flex: "1 1 450px",
-        minWidth: 0,
+        width: "100%",
         boxSizing: "border-box",
       }}
     >
+      {/* SECTION LABEL */}
       <p
         className="vs-eyebrow"
         style={{
@@ -321,79 +313,88 @@ function Home() {
           fontWeight: "700",
           letterSpacing: "2px",
           textTransform: "uppercase",
-          color: "var(--vs-sage-green) !important;",
-          marginBottom: "18px",
+          // color: "var(--vs-sage-green)",
+          margin: "0 0 14px",
         }}
       >
         OUR PERSPECTIVE
       </p>
 
-      <h2
+      {/* HEADING */}
+      <h4
         className="vs-shifts-title"
         style={{
-          fontSize: "clamp(30px, 3.5vw, 46px)",
+          fontSize: "clamp(30px, 3.5vw, 36px)",
           lineHeight: "1.2",
           fontWeight: "700",
           color: "#0B1F3A",
-          margin: "0 0 24px",
+          margin: "0 0 22px",
         }}
       >
         Navigating Every Major Business Shift
-      </h2>
+      </h4>
 
-      <p
-        className="vs-shifts-subtitle"
+      {/* FULL-WIDTH DESCRIPTION */}
+      <div
         style={{
-          fontSize: "16px",
-          lineHeight: "1.9",
-          color: "#536174",
-          margin: 0,
-          whiteSpace: "pre-line",
+          width: "100%",
+          display: "grid",
+          gridTemplateColumns: "1fr",
+          gap: "14px",
+          boxSizing: "border-box",
         }}
       >
-        At the verge of every major business shift, there is complexity.
-        We help leadership navigate it.
+        <p
+          className="vs-shifts-subtitle"
+          style={{
+            fontSize: "16px",
+            lineHeight: "1.8",
+            color: "#536174",
+            margin: 0,
+          }}
+        >
+          At the verge of every major business shift lies a
+          critical challenge: turning strategic decisions into
+          meaningful action. Growth, transformation, expansion
+          and transition demand more than a clear vision—they
+          require the right operating models, leadership,
+          organisational structures, processes and technology
+          to move the business forward.
+        </p>
 
-        {"\n\n"}
+        <p
+          className="vs-shifts-subtitle"
+          style={{
+            fontSize: "16px",
+            lineHeight: "1.8",
+            color: "#536174",
+            margin: 0,
+          }}
+        >
+          <b>VERGE SHIFTS bridges the gap between intent and execution.</b>
+          We work alongside Boards, CEOs, promoters and business
+          leaders to navigate complexity, translate priorities
+          into coordinated action, and build the organisational
+          and digital capabilities needed to sustain change.
+        </p>
+      </div>
 
-        Verge Shifts partners with Boards, CEOs and leadership teams to
-        navigate critical transformation and transition journeys —
-        turning strategic intent into organizational, operational,
-        technological and people shifts, and ultimately into execution.
-      </p>
-    </div>
-
-    {/* RIGHT SIDE - IMAGE */}
-    <div
-      className="vs-perspective-visual"
-      style={{
-        flex: "1 1 450px",
-        minWidth: 0,
-        width: "100%",
-        overflow: "hidden",
-        borderRadius: "12px",
-      }}
-    >
-      <img
-        src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=85"
-        alt="Verge Shifts Leadership Perspective"
-        className="vs-perspective-img"
+      {/* CLOSING STATEMENT */}
+      <h4
         style={{
-          display: "block",
-          width: "100%",
-          height: "420px",
-          objectFit: "cover",
-          objectPosition: "center",
-          borderRadius: "12px",
+          color: "#0B1F3A",
+          fontSize: "20px",
+          lineHeight: "1.5",
+          margin: "20px 0 0",
+          fontWeight: "700",
         }}
-      />
+      >
+        From the Boardroom to Digital, we help the shift happen.
+      </h4>
     </div>
   </div>
-</div>
-
-
-
 </section>
+
      {/* THE SHIFTS */}
 <section id="shifts" className="vs-shifts-grid-section" style={{
     padding: "2rem 0",           /* 1. Reduces top & bottom section height */
@@ -404,229 +405,84 @@ margin: "-30 auto",
    
 
 
-<div
-  className="vs-container"
-  style={{
-    width: "100%",
-    maxWidth: "1200px",
-    margin: "0 auto",
-    padding: "50px 24px",
-    boxSizing: "border-box",
-  }}
->
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "minmax(280px, 0.85fr) minmax(0, 2fr)",
-      alignItems: "center",
-      gap: "40px",
-      width: "100%",
-    }}
-  >
-    {/* LEFT SIDE - CONTENT */}
-    <div
-      className="vs-shifts-header"
-      style={{
-        width: "100%",
-        minWidth: 0,
-      }}
-    >
-      <p
-        className="vs-eyebrow"
-        style={{
-          fontSize: "12px",
-          fontWeight: "700",
-          letterSpacing: "2px",
-          color: "var(--vs-sage-green) !important;",
-          marginBottom: "16px",
-        }}
-      >
-        THE SHIFTS WE NAVIGATE
-      </p>
-
-      <h2
-        className="vs-shifts-title"
-        style={{
-          fontSize: "clamp(28px, 3vw, 40px)",
-          lineHeight: "1.2",
-          fontWeight: "700",
-          color: "#0B1F3A",
-          margin: "0 0 18px",
-        }}
-      >
-        Four transformation journeys.
-      </h2>
-
-      <p
-        className="vs-shifts-subtitle"
-        style={{
-          fontSize: "16px",
-          lineHeight: "1.7",
-          fontWeight: "600",
-          color: "#0B1F3A",
-          margin: "0 0 16px",
-        }}
-      >
-        Four integrated journeys. People-centric. Built for what's next.
-      </p>
-
-      <p
-        className="vs-shifts-subtitle"
-        style={{
-          fontSize: "14px",
-          lineHeight: "1.8",
-          color: "#536174",
-          margin: 0,
-        }}
-      >
-        At the verge of every major business shift, there is complexity.
-        We help leadership navigate it.
-
-        {"\n\n"}
-
-        Verge Shifts partners with Boards, CEOs and leadership teams to
-        navigate critical transformation and transition journeys — turning
-        strategic intent into organizational, operational, technological
-        and people shifts, and ultimately into execution.
-      </p>
+<div className="vs-container">
+    <div className="vs-shifts-header">
+      <p className="vs-eyebrow">THE SHIFTS WE NAVIGATE</p>
+      <h2 className="vs-shifts-title">Four transformation journeys.</h2>
+      <p className="vs-shifts-subtitle">Four integrated journey , People-centric , Built for what next</p>
+     
     </div>
 
-    {/* RIGHT SIDE - FOUR HORIZONTAL JOURNEY CARDS */}
-    <div
-      className="vs-journey-grid"
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
-        gap: "12px",
-        width: "100%",
-        minWidth: 0,
-      }}
-    >
+    {/* 4 Pillars Grid */}
+    <div className="vs-journey-grid">
       {JOURNEYS.map((journey) => (
+        // <div
+        //   key={journey.id}
+        //   className="vs-journey-card"
+        // >
+        //   {/* Background Image Container */}
+        //   <div
+        //     className="vs-card-bg"
+        //     style={{ backgroundImage: `url("${journey.image}")` }}
+        //   />
+
+        //   {/* Dark Overlay */}
+        //   <div className="vs-card-overlay" />
+
+        //   {/* Card Content */}
+        //   <div className="vs-card-content">
+        //     <span className="vs-card-tag">Transformation Pillar</span>
+
+        //     <h3 className="vs-card-title">
+        //       <span className="vs-title-main">{journey.title}</span>
+        //       <span className="vs-title-sub">{journey.subtitle}</span>
+        //     </h3>
+
+        //     <p className="vs-card-description">{journey.description}</p>
+
+        //     <div className="vs-card-footer">
+        //       <span className="vs-action-text">View Blueprint</span>
+        //       <ArrowRight className="vs-action-icon" size={16} />
+        //     </div>
+        //   </div>
+        // </div>
         <Link
           key={journey.id}
           to={journey.path}
           className="vs-journey-card"
-          style={{
-            position: "relative",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "flex-end",
-            minWidth: 0,
-            height: "340px",
-            overflow: "hidden",
-            borderRadius: "10px",
-            textDecoration: "none",
-            color: "#FFFFFF",
-          }}
+          style={{ textDecoration: "none", color: "inherit", display: "flex" }}
         >
-          {/* Background Image */}
+          {/* Background Image Container */}
           <div
             className="vs-card-bg"
-            style={{
-              position: "absolute",
-              inset: 0,
-              backgroundImage: `url("${journey.image}")`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
+            style={{ backgroundImage: `url("${journey.image}")` }}
           />
 
           {/* Dark Overlay */}
-          <div
-            className="vs-card-overlay"
-            style={{
-              position: "absolute",
-              inset: 0,
-              background:
-                "linear-gradient(to top, rgba(5, 20, 40, 0.94), rgba(5, 20, 40, 0.08))",
-            }}
-          />
+          <div className="vs-card-overlay" />
 
           {/* Card Content */}
-          <div
-            className="vs-card-content"
-            style={{
-              position: "relative",
-              zIndex: 1,
-              padding: "16px 12px",
-              width: "100%",
-              boxSizing: "border-box",
-            }}
-          >
-            <span
-              className="vs-card-tag"
-              style={{
-                fontSize: "9px",
-                letterSpacing: "1px",
-                textTransform: "uppercase",
-                color: "#BFDBFE",
-              }}
-            >
-              Transformation Pillar
-            </span>
-
-            <h3
-              className="vs-card-title"
-              style={{
-                fontSize: "17px",
-                lineHeight: "1.3",
-                margin: "10px 0",
-                overflowWrap: "anywhere",
-              }}
-            >
-              <span
-                className="vs-title-main"
-                style={{ display: "block" }}
-              >
-                {journey.title}
-              </span>
-
-              <span
-                className="vs-title-sub"
-                style={{
-                  display: "block",
-                  fontSize: "12px",
-                  fontWeight: "400",
-                  marginTop: "5px",
-                }}
-              >
-                {journey.subtitle}
-              </span>
+          <div className="vs-card-content">
+            {/* <span className="vs-card-tag">Transformation Pillar</span> */}
+  <span className="vs-title-sub">{journey.title}{journey.subtitle}</span>
+            <h3 className="vs-card-title">
+              
+              {/* <span className="vs-title-main">{journey.title}</span>
+              <span className="vs-title-sub">{journey.subtitle}</span> */}
             </h3>
 
-            <p
-              className="vs-card-description"
-              style={{
-                fontSize: "11px",
-                lineHeight: "1.6",
-                margin: "0 0 12px",
-              }}
-            >
-              {journey.description}
-            </p>
+            {/* <p className="vs-card-description">{journey.description}</p> */}
 
-            <div
-              className="vs-card-footer"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                gap: "4px",
-                fontSize: "11px",
-              }}
-            >
-              <span className="vs-action-text">View Blueprint</span>
-              <ArrowRight className="vs-action-icon" size={14} />
+            <div className="vs-card-footer">
+              {/* <span className="vs-title-sub">{journey.title}{journey.subtitle}</span> */}
+              {/* <span className="vs-title-sub">{journey.subtitle}</span> */}
+              {/* <ArrowRight className="vs-action-icon" size={16} /> */}
             </div>
           </div>
         </Link>
       ))}
     </div>
   </div>
-</div>
-
 
 </section>
 {/* <section 
