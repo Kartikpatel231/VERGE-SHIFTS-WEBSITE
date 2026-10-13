@@ -789,9 +789,9 @@ margin: "-30 auto",
           
           <div className="vs-card-top">
             <span className="vs-card-number">STEP {number}</span>
-            {/* {index < approach.length - 1 && (
-              // <span className="vs-card-arrow">→</span>
-            )} */}
+             {index < approach.length - 1 && (
+               <span className="vs-card-arrow">→</span>
+            )} 
           </div>
 
           <h3 className="vs-card-title">{title}</h3>
