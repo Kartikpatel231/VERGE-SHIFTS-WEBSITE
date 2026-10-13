@@ -11,7 +11,6 @@ function Arrow() {
   );
 }
 
-
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -61,15 +60,77 @@ function Header() {
     }
   };
 
+  const handleShiftLinkClick = () => {
+    closeMenu();
+  };
+
   return (
     <header className="site-header">
-      <div className="container header-inner">
+      <style>{`
+        /* Remove lines from Home and The Shifts */
+        .main-nav > a.active,
+        .main-nav > a.active:hover,
+        .main-nav > a.active:focus,
+        .main-nav > a.active:active,
+        .main-nav .vs-nav-dropdown-trigger,
+        .main-nav .vs-nav-dropdown-trigger:hover,
+        .main-nav .vs-nav-dropdown-trigger:focus,
+        .main-nav .vs-nav-dropdown-trigger:active {
+          border: none !important;
+          border-bottom: none !important;
+          box-shadow: none !important;
+          background-image: none !important;
+          text-decoration: none !important;
+          outline: none !important;
+        }
 
+        .main-nav > a.active::before,
+        .main-nav > a.active::after,
+        .main-nav > a.active:hover::before,
+        .main-nav > a.active:hover::after,
+        .main-nav .vs-nav-dropdown-trigger::before,
+        .main-nav .vs-nav-dropdown-trigger::after,
+        .main-nav .vs-nav-dropdown-trigger:hover::before,
+        .main-nav .vs-nav-dropdown-trigger:hover::after,
+        .main-nav .vs-nav-dropdown-trigger:focus::before,
+        .main-nav .vs-nav-dropdown-trigger:focus::after {
+          content: none !important;
+          display: none !important;
+          border: none !important;
+          background: none !important;
+        }
+
+        /* Submenu links styled as buttons, without hover lines */
+        .vs-nav-dropdown-menu a.vs-shift-button,
+        .vs-nav-dropdown-menu a.vs-shift-button:hover,
+        .vs-nav-dropdown-menu a.vs-shift-button:focus,
+        .vs-nav-dropdown-menu a.vs-shift-button:active {
+          display: block;
+          padding: 10px 14px;
+          border: 1px solid #d9e3e3 !important;
+          border-radius: 6px;
+          background: #ffffff !important;
+          color: #294b50 !important;
+          box-shadow: none !important;
+          text-decoration: none !important;
+          background-image: none !important;
+          outline: none !important;
+        }
+
+        .vs-nav-dropdown-menu a.vs-shift-button::before,
+        .vs-nav-dropdown-menu a.vs-shift-button::after {
+          content: none !important;
+          display: none !important;
+        }
+      `}</style>
+
+      <div className="container header-inner">
         <Brand />
 
         <button
+          type="button"
           className="menu-toggle"
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() => setMenuOpen((previous) => !previous)}
           aria-expanded={menuOpen}
           aria-label="Toggle navigation"
         >
@@ -78,69 +139,101 @@ function Header() {
         </button>
 
         <nav
-          className={`main-nav ${
-            menuOpen ? "main-nav--open" : ""
-          }`}
+          className={`main-nav ${menuOpen ? "main-nav--open" : ""}`}
           aria-label="Primary navigation"
         >
-
           {/* HOME */}
           <Link
             className="active"
             to="/"
-           // onClick={closeMenu}
-             onClick={handleHomeClick}
+            onClick={handleHomeClick}
+            style={{
+              textDecoration: "none",
+              borderBottom: "none",
+              boxShadow: "none",
+            }}
           >
             Home
           </Link>
-          <Link
-            to="/#shifts"
-           // onClick={closeMenu}
-            onClick={() => handleSectionClick("shifts")}
-          >
-            The Shifts{" "}
-            <span className="chevron">⌄</span>
-          </Link>
 
           {/* THE SHIFTS */}
-         
+          <div className="vs-nav-dropdown">
+            <button
+              type="button"
+              onClick={() => handleSectionClick("shifts")}
+              className="vs-nav-dropdown-trigger"
+              style={{
+                background: "none",
+                border: "none",
+                padding: "25px 0",
+                font: "inherit",
+                color: "inherit",
+                cursor: "pointer",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "6px",
+                boxShadow: "none",
+                textDecoration: "none",
+              }}
+            >
+              The Shifts <span className="chevron">⌄</span>
+            </button>
+
+            <ul className="vs-nav-dropdown-menu">
+              <li>
+                <Link
+                  to="/strategy-transformation"
+                  onClick={handleShiftLinkClick}
+                  className="vs-shift-button"
+                >
+                  Strategy → Transformation
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/people-performance"
+                  onClick={handleShiftLinkClick}
+                  className="vs-shift-button"
+                >
+                  People → Performance
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/change-sustainability"
+                  onClick={handleShiftLinkClick}
+                  className="vs-shift-button"
+                >
+                  Transition → Continuity
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/today-tomorrow"
+                  onClick={handleShiftLinkClick}
+                  className="vs-shift-button"
+                >
+                  Digital → Enablement
+                </Link>
+              </li>
+            </ul>
+          </div>
 
           {/* CONTEXTS */}
-          <Link
-            // to="/#contexts"
-            to="/business-contexts"
-            onClick={closeMenu}
-          //  onClick={closeMenu}
-          // onClick={() => handleSectionClick("contexts")}
-          >
+          <Link to="/business-contexts" onClick={closeMenu}>
             Contexts
           </Link>
 
-          {/* ABOUT */}
-          {/* <Link
-            to="/#approach"
-           // onClick={closeMenu}
-             onClick={() => handleSectionClick("approach")}
-          >
-            Approach
-          </Link> */}
- 
-          {/* INSIGHTS */}
-        <Link
+          {/* OUR APPROACH */}
+          <Link
             to="/#insights"
-            // onClick={closeMenu}
-             onClick={() => handleSectionClick("insights")}
+            onClick={() => handleSectionClick("insights")}
           >
-           Our Approach
-          </Link> 
-
-          {/* CONTACT PAGE */}
-          {/* <Link
-            to="/contact"
-            onClick={closeMenu}
-          >
-            Contact
-          </Link> */}
+            Our Approach
+          </Link>
 
           {/* GET IN TOUCH */}
           <Link
@@ -150,7 +243,6 @@ function Header() {
           >
             Get in Touch <Arrow />
           </Link>
-
         </nav>
       </div>
     </header>

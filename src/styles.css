@@ -21,8 +21,8 @@ button { font: inherit; }
 .brand-copy small { font-size: 14px; letter-spacing: .04em; color: var(--slate); }
 .main-nav { display: flex; align-items: center; gap: 26px; font-size: 16px; color: #294b50; }
 .main-nav a { padding: 25px 0; position: relative; }
-.main-nav a:not(.header-cta):hover, .main-nav a.active { color: var(--ink); }
-.main-nav a:not(.header-cta):hover::after, .main-nav a.active::after { content: ''; position: absolute; left: 0; right: 0; bottom: 17px; height: 2px; background: var(--forest); }
+/* .main-nav a:not(.header-cta):hover, .main-nav a.active { color: var(--ink); }
+.main-nav a:not(.header-cta):hover::after, .main-nav a.active::after { content: ''; position: absolute; left: 0; right: 0; bottom: 17px; height: 2px; background: var(--forest); } */
 .chevron { margin-left: 4px; font-size: 12px; }
 .header-cta { background: var(--ink); color: var(--white); padding: 12px 18px !important; border-radius: 5px; font-size: 14px; }
 .header-cta .arrow { margin-left: 8px; }
@@ -826,4 +826,126 @@ h2 {
     font-size: 17px;
     line-height: 1.8;
   }
+}
+
+/* The Shifts dropdown */
+.vs-nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.vs-nav-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.vs-nav-dropdown-trigger .chevron {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.vs-nav-dropdown:hover .chevron,
+.vs-nav-dropdown:focus-within .chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown menu */
+.vs-nav-dropdown-menu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 245px;
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease,
+              visibility 0.2s ease;
+  z-index: 1000;
+}
+
+.vs-nav-dropdown:hover .vs-nav-dropdown-menu,
+.vs-nav-dropdown:focus-within .vs-nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.vs-nav-dropdown-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.vs-nav-dropdown-menu li a {
+  display: block;
+  padding: 11px 16px;
+  color: #000000;
+  font-size: 14px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.vs-nav-dropdown-menu li a:hover,
+.vs-nav-dropdown-menu li a:focus-visible {
+  background: #f3f6f6;
+
+}
+
+.site-header {
+  border-bottom: none !important;
+}
+.site-header {
+  border-bottom: 1px solid rgba(14,57,65,.07);
+}
+.main-nav .vs-nav-dropdown:hover > .vs-nav-dropdown-trigger,
+.main-nav .vs-nav-dropdown:focus-within > .vs-nav-dropdown-trigger,
+.main-nav .vs-nav-dropdown-trigger:hover,
+.main-nav .vs-nav-dropdown-trigger:focus,
+.main-nav .vs-nav-dropdown-trigger:active {
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  background-image: none !important;
+  text-decoration: none !important;
+}
+
+.main-nav .vs-nav-dropdown:hover > .vs-nav-dropdown-trigger::before,
+.main-nav .vs-nav-dropdown:hover > .vs-nav-dropdown-trigger::after,
+.main-nav .vs-nav-dropdown:focus-within > .vs-nav-dropdown-trigger::before,
+.main-nav .vs-nav-dropdown:focus-within > .vs-nav-dropdown-trigger::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+}
+
+.vs-nav-dropdown-menu a.vs-shift-button,
+.vs-nav-dropdown-menu a.vs-shift-button:hover,
+.vs-nav-dropdown-menu a.vs-shift-button:focus,
+.vs-nav-dropdown-menu a.vs-shift-button:active {
+  display: block;
+  padding: 10px 14px;
+  border: 1px solid #d9e3e3 !important;
+  border-radius: 6px;
+  background: #ffffff !important;
+  color: #294b50 !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  background-image: none !important;
+  outline: none !important;
+}
+
+.vs-nav-dropdown-menu a.vs-shift-button::before,
+.vs-nav-dropdown-menu a.vs-shift-button::after {
+  content: none !important;
+  display: none !important;
 }
