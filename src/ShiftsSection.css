@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
 
 /* Scope Variables */
@@ -14,7 +15,7 @@
   --vs-font-body: 'Plus Jakarta Sans', sans-serif;
 }
 
-/* Container resets */
+/* Container */
 .vs-container {
   width: 100%;
   max-width: 1240px;
@@ -22,7 +23,19 @@
   padding: 0 1.5rem;
 }
 
-/* Eyebrow */
+/* Section */
+.vs-shifts-grid-section {
+  padding: 3rem 0;
+  background-color: var(--vs-white);
+  border-bottom: 1px solid var(--vs-border);
+}
+
+/* Heading */
+.vs-shifts-header {
+  max-width: 640px;
+  margin-bottom: 2rem;
+}
+
 .vs-eyebrow {
   font-family: var(--vs-font-head);
   font-size: 0.75rem;
@@ -31,18 +44,6 @@
   letter-spacing: 0.18em;
   color: var(--vs-sage);
   margin-bottom: 0.5rem;
-}
-
-/* Shifts Grid Section */
-.vs-shifts-grid-section {
-  padding: 4.5rem 0 5rem;
-  background-color: var(--vs-white);
-  border-bottom: 1px solid var(--vs-border);
-}
-
-.vs-shifts-header {
-  max-width: 640px;
-  margin-bottom: 3rem;
 }
 
 .vs-shifts-title {
@@ -62,101 +63,66 @@
   margin-top: 0.5rem;
 }
 
-/* Grid */
+/* Four-card Grid */
 .vs-journey-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
 }
 
-/* Card Container */
+/* Card - Reduced Image Size */
 .vs-journey-card {
   position: relative;
-  background-color: var(--vs-navy);
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(11, 45, 58, 0.08);
-  border: 1px solid #E2E8F0;
-  cursor: pointer;
-  min-height: 340px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 1.5rem;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  min-width: 0;
+  height: 230px;
+  padding: 1rem;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 10px;
+  background-color: var(--vs-navy);
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 12px rgba(11, 45, 58, 0.08);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .vs-journey-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px rgba(11, 45, 58, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(11, 45, 58, 0.16);
 }
 
-/* FIX: Image background visible behind overlay */
+/* Background Image */
 .vs-card-bg {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.5;
-  z-index: 1;
-  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: -2;
+  transition: transform 0.5s ease;
 }
 
 .vs-journey-card:hover .vs-card-bg {
-  transform: scale(1.08);
+  transform: scale(1.04);
 }
 
-/* Gradient Overlay */
+/* Subtle Overlay */
 .vs-card-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  z-index: -1;
   background: linear-gradient(
-    180deg,
-    rgba(11, 45, 58, 0.2) 0%,
-    rgba(11, 45, 58, 0.85) 60%,
-    rgba(11, 45, 58, 0.98) 100%
+    to top,
+    rgba(11, 45, 58, 0.7),
+    rgba(11, 45, 58, 0.05)
   );
-  z-index: 2;
-}
-
-/* Card Content Box */
-.vs-card-content {
-  position: relative;
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-/* Background Image - Fully Visible */
-.vs-card-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 1;
-  z-index: 1;
-  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.vs-journey-card:hover .vs-card-bg {
-  transform: scale(1.05);
-}
-
-/* Remove Dark Gradient */
-.vs-card-overlay {
-  display: none;
 }
 
 /* Card Content */
@@ -167,34 +133,27 @@
   flex-direction: column;
   gap: 0.5rem;
   color: #FFFFFF;
-  margin-bottom: 5px;
-  font-size: 15px;
- 
 }
+
+/* Journey Title */
+.vs-title-sub {
+  display: block;
+  font-family: var(--vs-font-head);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #FFFFFF;
+  overflow-wrap: anywhere;
+}
+
+/* Card Footer */
 .vs-card-footer {
-  margin-top: 1rem;
-  padding-top: 0.85rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #FFFFFF;
-  transition: color 0.25s ease;
-}
-
-/* Hover Effects */
-.vs-journey-card:hover .vs-card-footer {
-  color: #000000;
-}
-
-.vs-action-text {
-  font-family: var(--vs-font-head);
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #000000;
-}
-.vs-journey-card:hover .vs-card-footer {
-    color: #000000;
 }
 
 .vs-action-text {
@@ -209,4 +168,41 @@
 
 .vs-journey-card:hover .vs-action-icon {
   transform: translateX(4px);
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .vs-journey-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .vs-journey-card {
+    height: 220px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .vs-container {
+    padding: 0 1rem;
+  }
+
+  .vs-shifts-grid-section {
+    padding: 2.5rem 0;
+  }
+
+  .vs-shifts-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .vs-journey-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .vs-journey-card {
+    height: 200px;
+    padding: 1rem;
+  }
 }

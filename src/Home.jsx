@@ -247,10 +247,10 @@ function Home() {
         >
 
           <div className="container hero-content1">
-
+{/* 
              <p className="vs-eyebrow" style={{ color: "#1D6E6B" }}>
       VERGE SHIFTS
-    </p>
+    </p> */}
 
             <h1>
             <em> Transformation</em>
@@ -313,7 +313,8 @@ function Home() {
           fontWeight: "700",
           letterSpacing: "2px",
           textTransform: "uppercase",
-          // color: "var(--vs-sage-green)",
+           color: "var(--vs-sage-green)",
+           color: "#1D6E6B",
           margin: "0 0 14px",
         }}
       >
@@ -321,7 +322,7 @@ function Home() {
       </p>
 
       {/* HEADING */}
-      <h4
+      <h6
         className="vs-shifts-title"
         style={{
           fontSize: "clamp(30px, 3.5vw, 36px)",
@@ -332,7 +333,7 @@ function Home() {
         }}
       >
         Navigating Every Major Business Shift
-      </h4>
+      </h6>
 
       {/* FULL-WIDTH DESCRIPTION */}
       <div
@@ -383,7 +384,7 @@ function Home() {
       <h4
         style={{
           color: "#0B1F3A",
-          fontSize: "20px",
+          fontSize: "16px",
           lineHeight: "1.5",
           margin: "20px 0 0",
           fontWeight: "700",
@@ -408,7 +409,7 @@ margin: "-30 auto",
 <div className="vs-container">
     <div className="vs-shifts-header">
       <p className="vs-eyebrow">THE SHIFTS WE NAVIGATE</p>
-      <h2 className="vs-shifts-title">Four transformation journeys.</h2>
+      <h3 className="vs-shifts-title">Four transformation journeys.</h3>
       <p className="vs-shifts-subtitle">Four integrated journey , People-centric , Built for what next</p>
      
     </div>
@@ -450,7 +451,7 @@ margin: "-30 auto",
           key={journey.id}
           to={journey.path}
           className="vs-journey-card"
-          style={{ textDecoration: "none", color: "inherit", display: "flex" }}
+          style={{ textDecoration: "none", color: "inherit" }}
         >
           {/* Background Image Container */}
           <div
@@ -749,9 +750,9 @@ margin: "-30 auto",
           
           <div className="vs-card-top">
             <span className="vs-card-number">STEP {number}</span>
-            {index < approach.length - 1 && (
-              <span className="vs-card-arrow">→</span>
-            )}
+            {/* {index < approach.length - 1 && (
+              // <span className="vs-card-arrow">→</span>
+            )} */}
           </div>
 
           <h3 className="vs-card-title">{title}</h3>

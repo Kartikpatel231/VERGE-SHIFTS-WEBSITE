@@ -10,7 +10,7 @@ function Brand({ footer = false }) {
       aria-label="Verge Shifts home"
     >
       <img
-        src="/logo.png"
+        src="/logo2.jpeg"
         alt="Verge Shifts Logo"
         className="vs-footer-logo"
       />
