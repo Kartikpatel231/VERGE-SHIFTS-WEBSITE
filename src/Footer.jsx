@@ -42,13 +42,10 @@ const Footer = () => {
                   e.target.style.display = "none";
                 }}
               />
-              <div className="vs-brand-text">
-                {/* <strong>VERGE SHIFTS</strong> */}
-                <h4>Transformation &amp;  <br></br> Transition Management</h4>
-              </div>
+            
             </Link>
             <h3 className="vs-brand-tagline">
-               Boardroom to Digital
+                 From Boardroom to Digital
               {/* Partnering with Boards, CEOs, and leadership teams to navigate 
               critical business shifts from Boardroom to Digital. */}
             </h3>

@@ -262,7 +262,7 @@ function Home() {
 
             <div className="accent-line" />
 
-            <p className="hero-kicker" style={{ color: "#1D6E6B" }}>
+            <p className="hero-kicker" style={{ color: "#1E90FF" }}>
       From Boardroom to Digital
     </p>
 
@@ -306,15 +306,17 @@ function Home() {
       }}
     >
       {/* SECTION LABEL */}
+      <p></p>
       <p
         className="vs-eyebrow"
         style={{
-          fontSize: "13px",
+          
+          fontSize: "14px",
           fontWeight: "700",
           letterSpacing: "2px",
           textTransform: "uppercase",
            color: "var(--vs-sage-green)",
-           color: "#1D6E6B",
+           color: "#1E90FF",
           margin: "0 0 14px",
         }}
       >
@@ -327,12 +329,12 @@ function Home() {
         style={{
           fontSize: "clamp(30px, 3.5vw, 36px)",
           lineHeight: "1.2",
-          fontWeight: "700",
+          fontWeight: "500",
           color: "#0B1F3A",
           margin: "0 0 22px",
         }}
       >
-        Navigating Every Major Business Shift
+        Navigating every major business shifts
       </h6>
 
       {/* FULL-WIDTH DESCRIPTION */}
@@ -372,8 +374,9 @@ function Home() {
             margin: 0,
           }}
         >
-          <b>VERGE SHIFTS bridges the gap between intent and execution.</b>
-          We work alongside Boards, CEOs, promoters and business
+          <b>VERGE SHIFTS bridges the gap between intent and execution .</b>
+          <br></br>
+          We work along side Boards, CEOs, promoters and business
           leaders to navigate complexity, translate priorities
           into coordinated action, and build the organisational
           and digital capabilities needed to sustain change.
@@ -383,14 +386,14 @@ function Home() {
       {/* CLOSING STATEMENT */}
       <h4
         style={{
-          color: "#0B1F3A",
+          color: "#1E90FF",
           fontSize: "16px",
-          lineHeight: "1.5",
+          lineHeight: "1",
           margin: "20px 0 0",
-          fontWeight: "700",
+          fontWeight: "500",
         }}
       >
-        From the Boardroom to Digital, we help the shift happen.
+        From  Boardroom to Digital
       </h4>
     </div>
   </div>
@@ -408,8 +411,16 @@ margin: "-30 auto",
 
 <div className="vs-container">
     <div className="vs-shifts-header">
-      <p className="vs-eyebrow">THE SHIFTS WE NAVIGATE</p>
-      <h3 className="vs-shifts-title">Four transformation journeys.</h3>
+      <p className="vs-eyebrow" style={{
+        color:"#1E90FF"
+      }}>THE SHIFTS WE NAVIGATE</p>
+      <h4 className="vs-shifts-title" style={{
+          fontSize: "clamp(30px, 3.5vw, 36px)",
+          lineHeight: "1.2",
+          fontWeight: "500",
+          color: "#0B1F3A",
+          margin: "0 0 22px",
+      }}>Four transformation journeys.</h4>
       <p className="vs-shifts-subtitle">Four integrated journey , People-centric , Built for what next</p>
      
     </div>
@@ -635,8 +646,15 @@ margin: "-30 auto",
     <div className="vs-contexts-layout">
       
       <div className="vs-contexts-intro">
-        <p className="vs-eyebrow">BUSINESS CONTEXTS</p>
-        <h2>Where we create impact.</h2>
+        <p className="vs-eyebrow1" style={{  color:"#1E90FF"}}>BUSINESS CONTEXTS</p>
+        <h2  className="vs-shifts-title"
+        style={{
+          fontSize: "clamp(30px, 3.5vw, 36px)",
+          lineHeight: "1.2",
+          fontWeight: "500",
+          color: "#0B1F3A",
+          margin: "0 0 22px",
+        }}>Where we create impact.</h2>
         <p>
           Verge Shifts brings deep expertise across key business contexts
           to help you navigate complexity and support in building your next
@@ -735,12 +753,33 @@ margin: "-30 auto",
     {/* Compact Side-by-Side Header */}
     <div className="vs-approach-header">
       <div className="vs-header-left">
-        <span className="vs-eyebrow">OUR APPROACH</span>
-        <h2>Right shift at the right time.</h2>
-      </div>
-      <p className="vs-header-right-p">
+       
+          <p
+        className="vs-eyebrow1"
+        style={{
+          
+          fontSize: "14px",
+          fontWeight: "700",
+          letterSpacing: "2px",
+          textTransform: "uppercase",
+       
+           color: "#1E90FF",
+          margin: "0 0 14px",
+        }}
+      >OUR APPROACH</p>
+        <h2  className="vs-shifts-title"
+        style={{
+          fontSize: "clamp(30px, 3.5vw, 36px)",
+          lineHeight: "1.2",
+          fontWeight: "500",
+          color: "#0B1F3A",
+          margin: "0 0 22px",
+        }}>Right shift at the right time.</h2>
+         <p className="vs-header-right-p">
         Vergeshifts brings together areas that are often addressed separately. We customize our methodology to match your exact organizational needs.
       </p>
+      </div>
+     
     </div>
 
     {/* Horizontal Step Cards */}
@@ -750,9 +789,9 @@ margin: "-30 auto",
           
           <div className="vs-card-top">
             <span className="vs-card-number">STEP {number}</span>
-            {/* {index < approach.length - 1 && (
-              // <span className="vs-card-arrow">→</span>
-            )} */}
+             {index < approach.length - 1 && (
+               <span className="vs-card-arrow">→</span>
+            )} 
           </div>
 
           <h3 className="vs-card-title">{title}</h3>
