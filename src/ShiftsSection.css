@@ -40,6 +40,7 @@
   font-family: var(--vs-font-head);
   font-size: 0.75rem;
   font-weight: 700;
+  text-align: justify;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: var(--vs-sage);

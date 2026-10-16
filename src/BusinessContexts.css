@@ -3,6 +3,7 @@
   width: 100%;
   background: #ffffff;
   color: #174653;
+    color: #1E90FF !important;
 }
 
 /* Hero banner */
@@ -91,14 +92,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #39818b;
+   color: #1E90FF !important;
   font-size: 29px;
   line-height: 1;
   margin-bottom: 9px;
 }
 
 .context-card h2 {
-  color: #174653;
+  color: #0a2026;
   font-size: 16px;
   font-weight: 700;
   margin: 0 0 7px;
@@ -192,4 +193,14 @@
   .contexts-message p {
     font-size: 14px;
   }
+}
+/* Business Context – Blue Icons and Text */
+.vs-contexts-section .vs-context-item,
+.vs-contexts-section .vs-context-item span {
+  color: #1E90FF !important;
+}
+
+.vs-contexts-section .vs-context-icon {
+  color: #1E90FF !important;
+  stroke: #1E90FF !important;
 }

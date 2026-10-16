@@ -7,7 +7,7 @@
 section#insights,
 .vs-approach-section {
   --vs-navy: #0B2D3A;
-  --vs-sage: #1D6E6B;
+ color: #1E90FF !important;
   --vs-light-teal: #EAF4F4;
   --vs-slate-500: #64748B;
   --vs-slate-800: #1E293B;

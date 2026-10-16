@@ -157,7 +157,7 @@ const Footer = () => {
             </ul>
              <div className="vs-social-links">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/vergeshifts/home/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -166,7 +166,7 @@ const Footer = () => {
                 <FaLinkedinIn />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.linkedin.com/company/vergeshifts/home/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -175,7 +175,7 @@ const Footer = () => {
                 <FaInstagram />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.linkedin.com/company/vergeshifts/home/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -184,7 +184,7 @@ const Footer = () => {
                 <FaFacebookF />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://www.linkedin.com/company/vergeshifts/home/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Twitter"

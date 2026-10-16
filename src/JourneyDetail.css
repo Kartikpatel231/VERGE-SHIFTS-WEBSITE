@@ -15,6 +15,7 @@
 
   font-family: var(--vs-font-body) !important;
   color: var(--vs-slate-800) !important;
+    font-family: Arial, Helvetica, sans-serif;
   background-color: var(--vs-white) !important;
   width: 100% !important;
   box-sizing: border-box !important;
@@ -83,6 +84,8 @@
   line-height: 1.15 !important;
   margin: 0 0 0.85rem 0 !important;
   letter-spacing: -0.02em !important;
+  font-family: Arial, Helvetica, sans-serif;
+
 }
 
 #vs-page-wrapper .vs-hero-intro {
@@ -109,6 +112,7 @@
   font-family: var(--vs-font-head) !important;
   font-size: 1.35rem !important;
   font-weight: 700 !important;
+    font-family: Arial, Helvetica, sans-serif;
   color: var(--vs-navy) !important;
   margin: 0 0 0.85rem 0 !important;
   padding-bottom: 0.5rem !important;
@@ -144,6 +148,7 @@
   font-weight: 600 !important;
   font-size: 0.95rem !important;
   color: var(--vs-slate-800) !important;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #vs-page-wrapper .vs-focus-icon {
@@ -158,6 +163,7 @@
   border-radius: 12px !important;
   overflow: hidden !important;
   box-shadow: 0 4px 16px rgba(11, 45, 58, 0.05) !important;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #vs-page-wrapper .vs-side-img {
@@ -171,6 +177,7 @@
   padding: 1.75rem !important;
   background-color: var(--vs-navy) !important;
   color: var(--vs-white) !important;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #vs-page-wrapper .vs-outcome-label {
@@ -182,6 +189,7 @@
   text-transform: uppercase !important;
   margin-bottom: 0.5rem !important;
   display: block !important;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #vs-page-wrapper .vs-outcome-text {
@@ -201,5 +209,63 @@
   #vs-page-wrapper .vs-detail-hero {
     padding: 1.75rem !important;
     min-height: 300px !important;
+    font-family: Arial, Helvetica, sans-serif;
+    
+  }
+}
+.page-shell,
+.page-shell h1,
+.page-shell h2,
+.page-shell p,
+.page-shell li,
+.page-shell .page-number,
+.page-shell .outcome-icon {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.page-shell {
+  font-size: 18px !important;
+}
+
+.page-shell h1 {
+  font-size: 32px !important;
+  line-height: 1.3 !important;
+}
+
+.page-shell h2 {
+  font-size: 22px !important;
+  line-height: 1.4 !important;
+}
+
+.page-shell p {
+  font-size: 18px !important;
+  line-height: 1.7 !important;
+}
+
+.page-shell .focus-grid li {
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+}
+
+.page-shell .page-number {
+  font-size: 14px !important;
+}
+
+.page-shell .outcome-icon {
+  font-size: 26px !important;
+}
+
+@media (max-width: 768px) {
+  .page-shell h1 {
+    font-size: 26px !important;
+  }
+
+  .page-shell h2 {
+    font-size: 20px !important;
+  }
+
+  .page-shell p,
+  .page-shell .focus-grid li {
+    font-size: 18px !important;
   }
 }
