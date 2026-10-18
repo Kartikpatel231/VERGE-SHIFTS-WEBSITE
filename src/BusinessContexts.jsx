@@ -30,13 +30,13 @@ const contexts = [
     icon: Globe,
     title: "Expansion",
     description:
-      "Building for new markets, new geographies and new opportunities.",
+      "Entering new markets, expanding into new geographies and unlocking new opprtunities.",
   },
   {
     icon: GitCompare,
     title: "Integration",
     description:
-      "Aligning teams, systems and structures for stronger performance.",
+      "Aligning teams, systems and structures to strengthen performance.",
   },
   {
     icon:  Network,
@@ -54,7 +54,7 @@ const contexts = [
     icon: Cpu,
     title: "Digital Transformation",
     description:
-      "Leveraging technology, people and process for sustainable growth.",
+      "Leveraging technology, people and process to enable sustainable growth.",
   },
 ];
 
@@ -68,7 +68,7 @@ function BusinessContexts() {
             <span className="contexts-eyebrow">CONTEXTS</span>
             <h1>Business Contexts</h1>
             <p>
-              Different journeys. Same destination — Sustainable growth
+              Different journeys, Same destination — Sustainable growth
             </p>
           </div>
         </div>

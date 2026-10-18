@@ -44,11 +44,15 @@ const Footer = () => {
               />
             
             </Link>
-            <h3 className="vs-brand-tagline">
-                 From Boardroom to Digital
-              {/* Partnering with Boards, CEOs, and leadership teams to navigate 
-              critical business shifts from Boardroom to Digital. */}
-            </h3>
+            
+            <div className="accent-line" />
+
+                      <p className="hero-kicker" style={{ color: "#0B61AA",fontSize:"16px" }}>
+                    From Boardroom to Digital, We help you to navigate it.
+                     </p>
+
+         
+         
             {/* <div className="vs-social-links">
               <a
                 href="https://linkedin.com"

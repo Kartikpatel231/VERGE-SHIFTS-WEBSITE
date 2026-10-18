@@ -38,13 +38,13 @@ function App() {
 
           {/* PAGE 03 */}
           <Route
-            path="/change-sustainability"
+            path="/transition-continuity"
             element={<Page page={pages.change} />}
           />
 
           {/* PAGE 04 */}
           <Route
-            path="/today-tomorrow"
+            path="/digital-enablement"
             element={<Page page={pages.future} />}
           />
           <Route

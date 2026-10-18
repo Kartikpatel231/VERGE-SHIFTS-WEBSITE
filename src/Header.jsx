@@ -202,7 +202,7 @@ function Header() {
 
               <li>
                 <Link
-                  to="/change-sustainability"
+                  to="/transition-continuity"
                   onClick={handleShiftLinkClick}
                   className="vs-shift-button"
                 >
@@ -212,7 +212,7 @@ function Header() {
 
               <li>
                 <Link
-                  to="/today-tomorrow"
+                  to="/digital-enablement"
                   onClick={handleShiftLinkClick}
                   className="vs-shift-button"
                 >

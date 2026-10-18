@@ -3,7 +3,7 @@
   width: 100%;
   background: #ffffff;
   color: #174653;
-    color: #1E90FF !important;
+    color: #0B61AA !important;
 }
 
 /* Hero banner */
@@ -92,7 +92,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-   color: #1E90FF !important;
+   color: #0B61AA !important;
   font-size: 29px;
   line-height: 1;
   margin-bottom: 9px;
@@ -122,6 +122,7 @@
   min-height: 65px;
   background: #eef6f5;
   border-radius: 5px;
+  font-size: 14px;
 }
 
 .contexts-message-icon {
@@ -139,9 +140,10 @@
 
 .contexts-message p {
   color: #47747c;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.6;
   margin: 0;
+
 }
 
 /* Tablet */
@@ -197,10 +199,10 @@
 /* Business Context – Blue Icons and Text */
 .vs-contexts-section .vs-context-item,
 .vs-contexts-section .vs-context-item span {
-  color: #1E90FF !important;
+  color: #0B61AA !important;
 }
 
 .vs-contexts-section .vs-context-icon {
-  color: #1E90FF !important;
-  stroke: #1E90FF !important;
+  color: #0B61AA !important;
+  stroke: #0B61AA !important;
 }
