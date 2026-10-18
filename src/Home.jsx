@@ -402,14 +402,20 @@ margin: "-30 auto",
          
 
       }}>THE SHIFTS WE NAVIGATE</p>
-      <h4 className="vs-shifts-title" style={{
-          fontSize: "clamp(30px, 3.5vw, 36px)",
-          lineHeight: "1.2",
-          fontWeight: "500",
-          color: "#0B1F3A",
-           textAlign: "justify",
-          margin: "0 0 22px",
-      }}>Four transformation journeys.</h4>
+     <h4
+  className="vs-shifts-title"
+  style={{
+    fontSize: "clamp(30px, 3.5vw, 36px)",
+    lineHeight: "1.2",
+    fontWeight: "500",
+    color: "#0B1F3A",
+    textAlign: "left",
+    margin: "0 0 22px",
+    fontFamily: "Arial, sans-serif",
+  }}
+>
+  Four transformation journeys.
+</h4>
       <p className="vs-shifts-subtitle" style={{
          textAlign: "justify",wordSpacing: "3px", fontSize: "16px",fontFamily: "Arial, sans-serif",
             lineHeight: "1.8"
@@ -533,15 +539,16 @@ margin: "-30 auto",
           color: "#0B1F3A",
           margin: "0 0 22px",fontFamily: "Arial, sans-serif"
         }}>Right shift at the right time.</h2>
-       <p
+    <p
   className="vs-header-right-p"
   style={{
-    textAlign: "justify",
-    wordSpacing: "3px",
-    fontSize: "16px",
+    textAlign: window.innerWidth <= 768 ? "left" : "justify",
+    wordSpacing: window.innerWidth <= 768 ? "1px" : "3px",
+    fontSize: window.innerWidth <= 768 ? "14px" : "16px",
     fontFamily: "Arial, sans-serif",
-    lineHeight: "1.8",
-    whiteSpace: "nowrap",
+    lineHeight: window.innerWidth <= 768 ? "1.7" : "1.8",
+    whiteSpace: window.innerWidth <= 768 ? "normal" : "nowrap",
+    margin: 0,
   }}
 >
   Vergeshifts brings together areas that are often addressed separately. We customize our methodology to match your exact organizational needs.

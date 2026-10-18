@@ -1,0 +1,15 @@
+/* Desktop: keep paragraph on one line */
+.vs-header-right-p {
+  white-space: nowrap;
+}
+
+/* Tablet and mobile: allow text to wrap */
+@media (max-width: 768px) {
+  .vs-header-right-p {
+    white-space: normal;
+    font-size: 14px !important;
+    word-spacing: 1px !important;
+    line-height: 1.7 !important;
+    text-align: left !important;
+  }
+}
