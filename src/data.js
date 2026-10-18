@@ -75,9 +75,9 @@ export const pages = {
       "Translating transformation into digitally enabled organizations and ways of working",
     image: "digitaltr.png",
     challenge:
-      "The Challenge : Often digital transformation is about changing the digital platform ,without understanding of current state  of people and process and its change impact , leading to manpower cost , time and frustration.",
+      "Often digital transformation is about changing the digital platform ,without understanding of current state  of people and process and its change impact , leading to manpower cost , time and frustration.",
     approach:
-      "Our Approach: We help you design AS IS to TO BE  people , process &digital journey , stay throughout journey as transistion partner , build the culture for readiness and digital platform adoption.",
+      "We help you design AS IS to TO BE  people , process & digital  journey , stay throughout journey as transistion partner , build the culture for readiness and digital platform adoption.",
     focus: [
       "Process transformation",
       "Technology adoption",

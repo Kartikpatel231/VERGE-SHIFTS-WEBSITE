@@ -82,7 +82,7 @@ const journeys = [
     eyebrow: "",
     title: "DIGITAL → ",
     subtitle: "ENABLEMENT",
-    path: "/today-tomorrow",
+    path: "/digital-enablement",
   },
 ];
 
@@ -120,7 +120,7 @@ const JOURNEYS = [
     id: "transition",
     title: "TRANSITION  → ",
     subtitle: " CONTINUITY",
-     path: "/change-sustainability",
+     path: "/transition-continuity",
     description: "Navigating M&A, restructuring, and change management without loss of momentum.",
     image: BRAND_IMAGES.change,
     metrics: "Zero Disruption Rollouts"
@@ -129,7 +129,7 @@ const JOURNEYS = [
     id: "digital",
     title: "DIGITAL  → ",
     subtitle: " ENABLEMENT",
-      path: "/today-tomorrow",
+      path: "/digital-enablement",
     description: "Connecting tech investments with human behavior to capture full digital ROI.",
     image: BRAND_IMAGES.future,
     metrics: "3.5x Digital ROI Captures"
@@ -150,7 +150,7 @@ const approach = [
   [
     "01",
     "Diagnose",
-    "Deep dive to understand what organization want to achieve , identify the gap and define the transformation imperative.We align leadership strategic intent to Cuture , Organization design  & Operating Model , People Capablity & Mindsets , Technology",
+    "Deep dive to understand what organization want to achieve , identify the gap and define the transformation imperative.We align leadership strategic intent to Cuture , Organization design  & Operating Model. People Capablity and Mindsets",
   ],
   [
     "02",
@@ -165,7 +165,7 @@ const approach = [
   [
     "04",
     "Delivery",
-    "Embed the change, mindsets &cultural shifts ,  measure outcomes, and ensure the transformation endures.",
+    "Embed the change, mindsets & cultural shifts ,  measure outcomes, and ensure the transformation endures.",
   ],
 ];
 
@@ -242,7 +242,7 @@ function Home() {
 
             <div className="accent-line" />
 
-            <p className="hero-kicker" style={{ color: "#1E90FF" }}>
+            <p className="hero-kicker" style={{ color: "#0B61AA" }}>
       From Boardroom to Digital
     </p>
 
@@ -291,12 +291,12 @@ function Home() {
         className="vs-eyebrow"
         style={{
           
-          fontSize: "14px",
-          fontWeight: "700",
+          fontSize: "16px",
+          fontWeight: "900",
           letterSpacing: "2px",
           textTransform: "uppercase",
            color: "var(--vs-sage-green)",
-           color: "#1E90FF",
+           color: "#0B61AA",
           margin: "0 0 14px",
         }}
       >
@@ -339,7 +339,8 @@ function Home() {
         >
           At the verge of every major business shift lies a
           critical challenge: turning strategic decisions into
-          meaningful action. Growth, transformation, expansion
+          meaningful action.<br></br>
+          Growth, transformation, expansion
           and transition demand more than a clear vision—they
           require the right operating models, leadership,
           organisational structures, processes and technology
@@ -358,7 +359,7 @@ function Home() {
         >
           <b>VERGE SHIFTS bridges the gap between intent and execution .</b>
           <br></br>
-          We work along side Boards, CEOs, promoters and business
+          We work alongside Boards, CEOs, promoters and business
           leaders to navigate complexity, translate priorities
           into coordinated action, and build the organisational
           and digital capabilities needed to sustain change.
@@ -368,14 +369,16 @@ function Home() {
       {/* CLOSING STATEMENT */}
       <h4
         style={{
-          color: "#1E90FF",
+          color: "#0B61AA",
           fontSize: "16px",
           lineHeight: "1",
           margin: "20px 0 0",
           fontWeight: "500",
+           fontSize: "16px",
+          fontWeight: "900",
         }}
       >
-        From  Boardroom to Digital
+        From  Boardroom to Digital, We help you to navigate it.
       </h4>
     </div>
   </div>
@@ -394,7 +397,10 @@ margin: "-30 auto",
 <div className="vs-container">
     <div className="vs-shifts-header">
       <p className="vs-eyebrow" style={{
-        color:"#1E90FF"
+        color:"#0B61AA",
+         fontSize: "16px",
+         
+
       }}>THE SHIFTS WE NAVIGATE</p>
       <h4 className="vs-shifts-title" style={{
           fontSize: "clamp(30px, 3.5vw, 36px)",
@@ -460,8 +466,8 @@ margin: "-30 auto",
     <div className="vs-contexts-layout">
       
       <div className="vs-header-left">
-        <p className="" style={{  color:"#1E90FF" ,   fontSize: "14px",
-          fontWeight: "700",
+        <p className="" style={{  color:"#0B61AA" ,   fontSize: "16px",
+          fontWeight: "900",
           letterSpacing: "2px",
           textTransform: "uppercase"}}>BUSINESS CONTEXTS</p>
         <h2  className="vs-shifts-title"
@@ -510,12 +516,12 @@ margin: "-30 auto",
         className="vs-eyebrow1"
         style={{
           
-          fontSize: "14px",
-          fontWeight: "700",
+          fontSize: "16px",
+          fontWeight: "900",
           letterSpacing: "2px",
           textTransform: "uppercase",
        
-           color: "#1E90FF",
+           color: "#0B61AA",
           margin: "0 0 14px",
         }}
       >OUR APPROACH</p>
@@ -527,12 +533,19 @@ margin: "-30 auto",
           color: "#0B1F3A",
           margin: "0 0 22px",fontFamily: "Arial, sans-serif"
         }}>Right shift at the right time.</h2>
-         <p className="vs-header-right-p"  style={{
-         textAlign: "justify",wordSpacing: "3px",  fontSize: "16px",fontFamily: "Arial, sans-serif",
-            lineHeight: "1.8"
-      }}>
-        Vergeshifts brings together areas that are often addressed separately. We customize our methodology to match your exact organizational needs.
-      </p>
+       <p
+  className="vs-header-right-p"
+  style={{
+    textAlign: "justify",
+    wordSpacing: "3px",
+    fontSize: "16px",
+    fontFamily: "Arial, sans-serif",
+    lineHeight: "1.8",
+    whiteSpace: "nowrap",
+  }}
+>
+  Vergeshifts brings together areas that are often addressed separately. We customize our methodology to match your exact organizational needs.
+</p>
       </div>
      
     </div>

@@ -8,7 +8,7 @@
 section#contexts,
 .vs-contexts-section {
   --vs-navy: #0B2D3A;
-  color: #1E90FF !important;
+  color: #0B61AA !important;
   --vs-slate-500: #64748B;
   --vs-slate-800: #1E293B;
   --vs-border: #E2E8F0;
@@ -50,7 +50,7 @@ section#contexts,
   flex-direction: column !important;
   align-items: flex-start !important;
   text-align: left !important;
-  color: #1E90FF !important;
+  color: #0B61AA !important;
 }
 
 #contexts .vs-contexts-intro .vs-eyebrow {
@@ -175,10 +175,10 @@ section#contexts,
 /* Business Context – Blue Icons and Text */
 .vs-contexts-section .vs-context-item,
 .vs-contexts-section .vs-context-item span {
-  color: #1E90FF !important;
+  color: #0B61AA !important;
 }
 
 .vs-contexts-section .vs-context-icon {
-  color: #1E90FF !important;
-  stroke: #1E90FF !important;
+  color: #0B61AA !important;
+  stroke: #0B61AA !important;
 }

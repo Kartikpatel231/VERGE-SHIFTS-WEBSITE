@@ -17,7 +17,7 @@ function Page({ page }) {
             {page.number}
           </span>
 
-          <h1>{page.title}</h1>
+          <h2>{page.title}</h2>
 
           <p>{page.intro}</p>
         </div>
