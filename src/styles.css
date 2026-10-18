@@ -1069,3 +1069,35 @@ h2 {
     font-size: 13px;
   }
 }
+
+@media (max-width: 768px) {
+  /* Main navigation text */
+  .site-header .main-nav > a:not(.header-cta),
+  .site-header .vs-nav-dropdown-trigger {
+    font-size: 19px !important;
+    font-weight: 700 !important;
+    color: #000000 !important;
+  }
+
+  /* The Shifts submenu */
+  .site-header .vs-nav-dropdown-menu a.vs-shift-button {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #000000 !important;
+    padding: 14px 12px !important;
+  }
+
+  /* Get in Touch button */
+  .site-header .main-nav > a.header-cta {
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    color: #000000 !important;
+    min-height: 50px;
+  }
+
+  /* Dropdown arrow */
+  .site-header .vs-nav-dropdown-trigger .chevron {
+    font-size: 20px !important;
+    color: #000000 !important;
+  }
+}
