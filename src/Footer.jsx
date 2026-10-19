@@ -48,7 +48,7 @@ const Footer = () => {
             <div className="accent-line" />
 
                       <p className="hero-kicker" style={{ color: "#0B61AA",fontSize:"16px" }}>
-                    From Boardroom to Digital, We help you to navigate it.
+                    From Boardroom to Digital, <br></br>We help you to navigate it.
                      </p>
 
          
