@@ -285,17 +285,6 @@ h2 {
   border-radius: 2px;
 }
 
-/* Contact Form */
-.contact-form-wrapper {
-  width: 100%;
-}
-
-.contact-form-wrapper h2 {
-  color: #174b58;
-  font-size: 20px;
-  font-weight: 600;
-  margin: 0 0 15px;
-}
 
 .contact-form {
   display: flex;

@@ -2,7 +2,8 @@ export const pages = {
   strategy: {
     number: "",
     title: "Strategy → Transformation",
-    intro: "Turning strategic intent into an executable transformation agenda.",
+    intro:
+      "Translating business ambition into transformation priorities and executable plans.",
     image: "/strategy.png",
     challenge:
       "Great strategies create direction. But turning intent into real, lasting change requires more than a plan — it requires alignment, structure and execution.",
@@ -25,7 +26,8 @@ export const pages = {
   people: {
     number: "",
     title: "People → Performance",
-    intro: "From capablity to measurable business performance.",
+    intro:
+      "Connecting people, organisational effectiveness and leadership capability to business performance.",
     image: "/people.png",
     challenge:
       "Talent, leadership and culture are critical to transformation, but often underestimated, misaligned or not fully activated.",
@@ -35,9 +37,9 @@ export const pages = {
       "Leadership alignment",
       "Organization effectiveness",
       "Talent & Succession planning",
-      "Recruitment and selection",
+      "Recruitment & selection",
       "Performance architecture",
-      "Culture & mindset Coaching",
+      "Culture & Mindset coaching",
       "Capability building and transitions",
     ],
     secondaryImage:
@@ -48,7 +50,8 @@ export const pages = {
   change: {
     number: "",
     title: "TRANSITION → CONTINUITY",
-    intro: "Navigating the complexity of moving from one state to another.",
+    intro:
+      "Managing critical transitions while protecting business momentum and continuity.",
     image: "/transition.png",
     challenge:
       "Change is complex -and often fragile. What worked yesterday, may not work tommorrow. Without right approach , change can create fatigue & resistance.",
@@ -72,7 +75,7 @@ export const pages = {
     number: "",
     title: "DIGITAL → ENABLEMENT",
     intro:
-      "Translating transformation into digitally enabled organizations and ways of working",
+      "Connecting technology, processes and adoption to the way the business operates and delivers results.",
     image: "digitaltr.png",
     challenge:
       "Often digital transformation is about changing the digital platform ,without understanding of current state  of people and process and its change impact , leading to manpower cost , time and frustration.",

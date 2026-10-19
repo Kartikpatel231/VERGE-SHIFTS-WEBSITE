@@ -150,7 +150,7 @@ const approach = [
   [
     "01",
     "Diagnose",
-    "Deep dive to understand what organization want to achieve , identify the gap and define the transformation imperative.We align leadership strategic intent to Cuture , Organization design  & Operating Model. People Capablity and Mindsets",
+    "Deep dive to understand what organization want to achieve , identify the gap and define the transformation imperative. We align leadership strategic intent to Cuture , Organization design  & Operating Model. People Capablity and Mindsets",
   ],
   [
     "02",
@@ -337,14 +337,11 @@ function Home() {
             margin: 0,
           }}
         >
-          At the verge of every major business shift lies a
-          critical challenge: turning strategic decisions into
-          meaningful action.<br></br>
-          Growth, transformation, expansion
-          and transition demand more than a clear vision—they
-          require the right operating models, leadership,
-          organisational structures, processes and technology
-          to move the business forward.
+          At the verge of every Every major business shift brings a critical
+          challenge: turning strategic intent into execution.<br></br>
+          Growth, transformation, expansion and transition demand more than a 
+          clear vision. They require the right operating models, organisational capabilities,
+           processes, leadership and technology to move the business forward.
         </p>
 
         <p
@@ -357,17 +354,18 @@ function Home() {
             margin: 0,
           }}
         >
-          <b>VERGE SHIFTS bridges the gap between intent and execution .</b>
+          <b>VERGE SHIFTS bridges the gap between intent and execution.</b>
           <br></br>
-          We work alongside Boards, CEOs, promoters and business
-          leaders to navigate complexity, translate priorities
-          into coordinated action, and build the organisational
-          and digital capabilities needed to sustain change.
+          We work with Boards, CEOs, promoters 
+          and business leaders to navigate significant business
+          shifts — translating strategic priorities into
+          practical action while sustaining continuity
+          and building the capabilities required for what comes next.
         </p>
       </div>
 
       {/* CLOSING STATEMENT */}
-      <h4
+      {/* <h4
         style={{
           color: "#0B61AA",
           fontSize: "16px",
@@ -379,7 +377,7 @@ function Home() {
         }}
       >
         From  Boardroom to Digital, We help you to navigate it.
-      </h4>
+      </h4> */}
     </div>
   </div>
 </section>
