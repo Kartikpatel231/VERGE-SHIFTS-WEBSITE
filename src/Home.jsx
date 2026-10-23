@@ -337,7 +337,7 @@ function Home() {
             margin: 0,
           }}
         >
-          At the verge of every Every major business shift brings a critical
+          At the verge of every major business shift brings a critical
           challenge: turning strategic intent into execution.<br></br>
           Growth, transformation, expansion and transition demand more than a 
           clear vision. They require the right operating models, organisational capabilities,
