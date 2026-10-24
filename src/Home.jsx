@@ -361,7 +361,8 @@ function Home() {
           shifts — translating strategic priorities into
           practical action while sustaining continuity
           and building the capabilities required for what comes next.
-        </p>
+        <br></br>
+        Our perspective is simple: a strategy creates direction. Transformation requires deliberate design , clear ownership and disciplined execution</p>
       </div>
 
       {/* CLOSING STATEMENT */}
