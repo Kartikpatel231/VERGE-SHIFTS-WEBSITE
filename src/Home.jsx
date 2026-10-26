@@ -362,6 +362,7 @@ function Home() {
           practical action while sustaining continuity
           and building the capabilities required for what comes next.
         <br></br>
+          <br></br>
         Our perspective is simple: a strategy creates direction. Transformation requires deliberate design , clear ownership and disciplined execution</p>
       </div>
 
