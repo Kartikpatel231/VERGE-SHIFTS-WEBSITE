@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
@@ -37,7 +36,6 @@ const Contact = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     const maxLength = MAX_LENGTHS[name];
 
     if (maxLength && value.length > maxLength) {
@@ -87,9 +85,10 @@ const Contact = () => {
     // Validate maximum character lengths.
     for (const [field, maxLength] of Object.entries(MAX_LENGTHS)) {
       if (cleanedData[field].length > maxLength) {
-        const fieldName = {
-          organizationWebsite: "Organization Website",
-        }[field] || field.charAt(0).toUpperCase() + field.slice(1);
+        const fieldName =
+          field === "organizationWebsite"
+            ? "Organization Website"
+            : field.charAt(0).toUpperCase() + field.slice(1);
 
         setSubmitStatus("error");
         setStatusMessage(
@@ -108,14 +107,14 @@ const Contact = () => {
       return;
     }
 
-    // Only accept predefined subjects.
+    // Accept only predefined subjects.
     if (!ALLOWED_SUBJECTS.includes(cleanedData.subject)) {
       setSubmitStatus("error");
       setStatusMessage("Please select a valid subject.");
       return;
     }
 
-    // Limit total request payload to 12 KB.
+    // Limit the total JSON request payload to 12 KB.
     const requestBody = JSON.stringify(cleanedData);
     const payloadSize = new Blob([requestBody]).size;
 
@@ -204,10 +203,15 @@ const Contact = () => {
           <div className="contact-form-wrapper">
             <h2>Send a Message</h2>
 
-            <form onSubmit={handleSubmit} className="contact-form">
+            <form
+              onSubmit={handleSubmit}
+              className="contact-form"
+            >
               {/* Name */}
               <div className="contact-field">
-                <label htmlFor="contact-name">Name *</label>
+                <label htmlFor="contact-name">
+                  Name *
+                </label>
 
                 <input
                   type="text"
@@ -220,15 +224,13 @@ const Contact = () => {
                   autoComplete="name"
                   required
                 />
-
-                <small>
-                  {formData.name.length}/{MAX_LENGTHS.name}
-                </small>
               </div>
 
               {/* Email */}
               <div className="contact-field">
-                <label htmlFor="contact-email">Email *</label>
+                <label htmlFor="contact-email">
+                  Email *
+                </label>
 
                 <input
                   type="email"
@@ -241,10 +243,6 @@ const Contact = () => {
                   autoComplete="email"
                   required
                 />
-
-                <small>
-                  {formData.email.length}/{MAX_LENGTHS.email}
-                </small>
               </div>
 
               {/* Organization */}
@@ -263,13 +261,9 @@ const Contact = () => {
                   maxLength={MAX_LENGTHS.organization}
                   required
                 />
-
-                <small>
-                  {formData.organization.length}/{MAX_LENGTHS.organization}
-                </small>
               </div>
 
-              {/* Organization Website: any text is allowed */}
+              {/* Organization Website: accepts any text */}
               <div className="contact-field">
                 <label htmlFor="contact-organizationWebsite">
                   Organization Website
@@ -284,16 +278,13 @@ const Contact = () => {
                   placeholder="Enter organization website"
                   maxLength={MAX_LENGTHS.organizationWebsite}
                 />
-
-                <small>
-                  {formData.organizationWebsite.length}/
-                  {MAX_LENGTHS.organizationWebsite}
-                </small>
               </div>
 
               {/* Subject */}
               <div className="contact-field">
-                <label htmlFor="contact-subject">Subject *</label>
+                <label htmlFor="contact-subject">
+                  Subject *
+                </label>
 
                 <select
                   id="contact-subject"
@@ -316,7 +307,9 @@ const Contact = () => {
 
               {/* Message */}
               <div className="contact-field">
-                <label htmlFor="contact-message">Message *</label>
+                <label htmlFor="contact-message">
+                  Message *
+                </label>
 
                 <textarea
                   id="contact-message"
@@ -328,10 +321,6 @@ const Contact = () => {
                   maxLength={MAX_LENGTHS.message}
                   required
                 />
-
-                <small>
-                  {formData.message.length}/{MAX_LENGTHS.message}
-                </small>
               </div>
 
               {/* Submit */}
@@ -345,13 +334,14 @@ const Contact = () => {
                 {!isSubmitting && <span>→</span>}
               </button>
 
-              {/* Submission status */}
+              {/* Success message */}
               {submitStatus === "success" && (
                 <p className="form-success" role="status">
                   {statusMessage}
                 </p>
               )}
 
+              {/* Error message */}
               {submitStatus === "error" && (
                 <p className="form-error" role="alert">
                   {statusMessage}
