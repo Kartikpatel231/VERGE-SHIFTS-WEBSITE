@@ -152,7 +152,7 @@ const Footer = () => {
               </li> */}
               <li>
                 <Mail size={16} className="vs-info-icon" />
-                <a href="mailto:contact@vergeshifts.com">contact@vergeshifts.com</a>
+                <a href="mailto:connect@vergeshifts.com">connect@vergeshifts.com</a>
               </li>
               {/* <li>
                 <Phone size={16} className="vs-info-icon" />
